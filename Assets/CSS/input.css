@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@layer base {
+    body{
+        @apply flex flex-col min-h-screen text-black text-xl bg-white
+    }
+        
+    :root{
+        /* максимальная ширина контента */
+        @apply [--widthContent:1110px]
+        /* Растояние от границы брузера по бокам */
+        [--widthContentMargin:15px]
+    }    
+
+    /* Настройка кастомных контейнеров */
+    /* Применение системы гридов для расположения контента в ячейку main или full или в любую другую ячейку между именованными линиями grid*/
+
+    .grid-container{        
+        grid-template-columns: [full-start] minmax(var(--widthContentMargin), 1fr) [main-start] minmax(0, var(--widthContent)) [main-end] minmax(var(--widthContentMargin), 1fr) [full-end];
+        @apply grid
+    }
+
+    .grid-container>*{        
+        @apply col-[main]
+    }    
+
+    .wrapper{ 
+        @apply mr-auto max-w-[var(--widthContent)]
+    }
+
+    .container{        
+        @apply max-w-[var(--widthContent)]
+    } 
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
