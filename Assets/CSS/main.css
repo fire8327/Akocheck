@@ -334,6 +334,39 @@
   .resize {
     resize: both;
   }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-outside {
+    list-style-position: outside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .list-image-\[url\(\)\] {
+    list-style-image: url();
+  }
+  .list-image-\[url\(\.\.\/\)\] {
+    list-style-image: url(../);
+  }
+  .list-image-\[url\(\.\.\/Images\/\)\] {
+    list-style-image: url(../Images/);
+  }
+  .list-image-\[url\(\.\.\/Images\/index\)\] {
+    list-style-image: url(../Images/index);
+  }
+  .list-image-\[url\(\.\.\/Images\/index\/\)\] {
+    list-style-image: url(../Images/index/);
+  }
+  .list-image-\[url\(\.\.\/Images\/index\/list\.svg\)\] {
+    list-style-image: url(../Images/index/list.svg);
+  }
+  .list-image-\[url\(\.\.\/Unages\)\] {
+    list-style-image: url(../Unages);
+  }
+  .list-image-\[url\(\.\.\/Unages\/\)\] {
+    list-style-image: url(../Unages/);
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -378,6 +411,9 @@
   }
   .gap-7 {
     gap: calc(var(--spacing) * 7);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .gap-y-12 {
     row-gap: calc(var(--spacing) * 12);
@@ -547,6 +583,11 @@
   .md\:w-2\/3 {
     @media (width >= 48rem) {
       width: calc(2/3 * 100%);
+    }
+  }
+  .md\:w-\[321px\] {
+    @media (width >= 48rem) {
+      width: 321px;
     }
   }
   .md\:w-\[407px\] {
