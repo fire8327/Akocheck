@@ -278,6 +278,9 @@
   .w-36 {
     width: calc(var(--spacing) * 36);
   }
+  .w-\[2\] {
+    width: 2;
+  }
   .w-\[50px\] {
     width: 50px;
   }
@@ -307,6 +310,12 @@
   }
   .w-\[293px\] {
     width: 293px;
+  }
+  .w-\[350px\] {
+    width: 350px;
+  }
+  .w-\[407px\] {
+    width: 407px;
   }
   .w-fit {
     width: fit-content;
@@ -549,6 +558,9 @@
   .bg-cover {
     background-size: cover;
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -654,6 +666,11 @@
   }
   .\[background\:linear-gradient\(90deg\,\#F89E41_0\%\,\#F4CD44_100\%\)\] {
     background: linear-gradient(90deg,#F89E41 0%,#F4CD44 100%);
+  }
+  .first\:text-left {
+    &:first-child {
+      text-align: left;
+    }
   }
   .last\:border-none {
     &:last-child {
@@ -841,6 +858,11 @@
   .lg\:gap-16 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:py-6 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 6);
     }
   }
   .lg\:py-9 {
