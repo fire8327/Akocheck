@@ -56,3 +56,7 @@ body {
 .heading-4 {
     @apply text-sm md:text-base lg:text-lg leading-[100%]
 }
+
+.route-active {
+    @apply relative after:w-full after:h-px after:left-0 after:absolute after:bg-[#F99D41] after:-bottom-2
+}
