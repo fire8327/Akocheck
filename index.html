@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="Assets/CSS/main.css">
 </head>
 <body>
-    <header class="w-full bg-[#15142D]">
-        <div class="grid-container">
+    <header class="w-full bg-[#15142D] relative">
+        <div class="grid-container bg-[url(../Images/header/bg.png)] bg-left lg:bg-right bg-no-repeat">
             <div class="flex items-center justify-between py-4 md:py-7 gap-16 xl:gap-24">
                 <a href="#">
-                    <img src="Assets/Images/header/logo.png" alt="">
+                    <img src="Assets/Images/header/logo.png" alt="" class="w-40 md:w-[200px]">
                 </a>
-                <div class="flex max-lg:flex-col gap-2 lg:justify-between lg:grow max-md:hidden">
+                <div class="flex max-lg:flex-col gap-2 lg:justify-between lg:grow max-lg:hidden">
                     <a href="mailto:info@akocheck.ru" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
                         <img src="Assets/Images/header/mail.svg" alt="">
                         <span>info@akocheck.ru</span>
@@ -24,16 +24,17 @@
                     </a>
                     <a href="tel:+74952408674" target="_blank"  class="text-[#F99D41] font-bold heading-2">+7(495) 240-8674</a>
                 </div>
-                <button>
-                    <img src="Assets/Images/header/menu.svg" alt="" class="w-8 md:hidden">
+                <button id="toggler" class="lg:hidden">
+                    <img src="Assets/Images/header/menu.svg" alt="" class="w-8">
                 </button>
             </div>
+            <div id="overlay" class="bg-black/30 fixed inset-0 top-[75px] md:top-[109px] z-[4] max-lg:hidden lg:hidden"></div>
         </div>
         <div class="w-full h-px bg-[#F7A541]"></div>
         <div class="grid-container">
-            <div class="flex items-center gap-6 lg:justify-between py-5">
+            <div id="menu" class="flex items-center gap-6 lg:justify-between py-5 z-[5] max-lg:absolute max-lg:w-full max-lg:left-0 max-lg:top-0 max-lg:-translate-y-full transition-all duration-500 max-lg:flex-col max-lg:bg-[#15142D] max-lg:py-6">
                 <button class="w-[106px] h-8 flex items-center justify-center text-sm text-white border border-[#F99D41] rounded-[5px]">Цены</button>
-                <div class="flex items-center gap-12 text-white text-sm">
+                <div class="flex max-md:flex-col items-center gap-12 text-white text-sm">
                     <a href="#" class="flex items-center gap-2 w-fit">
                         <span>Услуги</span>
                         <img src="Assets/Images/header/arrow.svg" alt="">
@@ -43,6 +44,17 @@
                     <a href="#" class="w-fit route-active">Тестовый аудит</a>
                 </div>
                 <a href="#" class="w-[188px] h-8 flex items-center justify-center text-sm bg-[#F4CD44] rounded-[5px]">Личный кабинет</a>
+                <div class="flex flex-col gap-2 lg:hidden">
+                    <a href="mailto:info@akocheck.ru" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="Assets/Images/header/mail.svg" alt="">
+                        <span>info@akocheck.ru</span>
+                    </a>
+                    <a href="#" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="Assets/Images/header/tg.svg" alt="">
+                        <span>@akocheck_bot</span>
+                    </a>
+                    <a href="tel:+74952408674" target="_blank"  class="text-[#F99D41] font-bold heading-2">+7(495) 240-8674</a>
+                </div>
             </div>
         </div>
     </header>
@@ -530,5 +542,8 @@
         </div>
         <img src="Assets/Images/footer/bg.png" alt="" class="absolute top-0 left-0 z-[2] w-full">
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="Assets/JS/main.js"></script>
 </body>
 </html>
