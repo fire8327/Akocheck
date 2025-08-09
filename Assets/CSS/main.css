@@ -359,6 +359,9 @@
   .min-w-\[850px\] {
     min-width: 850px;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -509,6 +512,9 @@
   }
   .bg-\[\#F4CD44\] {
     background-color: #F4CD44;
+  }
+  .bg-\[\#F7A541\] {
+    background-color: #F7A541;
   }
   .bg-\[\#FFD7AD\] {
     background-color: #FFD7AD;
@@ -711,6 +717,11 @@
       flex-direction: column;
     }
   }
+  .max-md\:hidden {
+    @media (width < 48rem) {
+      display: none;
+    }
+  }
   .max-md\:flex-col {
     @media (width < 48rem) {
       flex-direction: column;
@@ -724,6 +735,11 @@
   .sm\:w-\[156px\] {
     @media (width >= 40rem) {
       width: 156px;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
     }
   }
   .md\:h-\[56px\] {
@@ -786,6 +802,11 @@
       justify-content: center;
     }
   }
+  .md\:gap-2\.5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 2.5);
+    }
+  }
   .md\:gap-4 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 4);
@@ -804,6 +825,11 @@
   .md\:gap-\[60px\] {
     @media (width >= 48rem) {
       gap: 60px;
+    }
+  }
+  .md\:py-7 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 7);
     }
   }
   .md\:text-center {
@@ -858,6 +884,11 @@
       max-width: 423px;
     }
   }
+  .lg\:grow {
+    @media (width >= 64rem) {
+      flex-grow: 1;
+    }
+  }
   .lg\:grid-cols-4 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -881,6 +912,11 @@
   .lg\:gap-5 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:gap-6 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 6);
     }
   }
   .lg\:gap-12 {
@@ -916,6 +952,11 @@
   .xl\:w-\[74\%\] {
     @media (width >= 80rem) {
       width: 74%;
+    }
+  }
+  .xl\:gap-24 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 24);
     }
   }
   .xl\:pl-10 {
