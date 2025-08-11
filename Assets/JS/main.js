@@ -8,12 +8,12 @@ $("#toggler, #overlay").click(() => {
 /* modal */
 $(".openMainModal").each((i, el) => {
     $(el).click(() => {
-        $("#mainModal").removeClass("hidden")
-        $("#overlayModal").removeClass("hidden")
+        $("#mainModal").show(500)
+        $("#overlayModal").show(500)
     })
 })
 
 $("#closeModal, #overlayModal").click(() => {
-    $("#mainModal").addClass("hidden")
-    $("#overlayModal").addClass("hidden")
+    $("#mainModal").hide(500)
+    $("#overlayModal").hide(500)
 })
