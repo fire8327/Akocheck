@@ -185,7 +185,7 @@
                 <p class="heading-2 font-bold text-center text-[#FF8C1C]">
                     Попробуйте тестовый аудит на 7 дней. Через 2 дня получите первые результаты
                 </p>
-                <button class="openMainModal cursor-pointer bg-[#F4CD44] px-5 py-2.5 flex items-center justify-center rounded-[5px] mx-auto heading-3 font-medium">Да, хочу тестовый аудит</button>
+                <button data-button-text="Да, хочу тестовый аудит" class="openMainModal cursor-pointer bg-[#F4CD44] px-5 py-2.5 flex items-center justify-center rounded-[5px] mx-auto heading-3 font-medium">Да, хочу тестовый аудит</button>
             </div>
             <div class="flex flex-col gap-7">
                 <div class="flex max-md:flex-col md:items-center gap-3 md:gap-4 px-4 py-3 bg-gradient-to-r from-[#F89E41] to-[#FFFFFF]">
@@ -234,7 +234,7 @@
                 <div class="flex items-center max-md:flex-col gap-6 lg:justify-between">
                     <a href="https://disk.360.yandex.ru/i/jgY23KAyf5z97g" target="_blank" class="flex items-center justify-center px-5 h-[76px] w-full md:w-[467px] bg-green-500 rounded-[5px] text-center font-medium heading-3">Скачайте Презентацию</a>
                     <p class="heading-1">или</p>
-                    <button class="openMainModal cursor-pointer flex items-center justify-center px-5 h-[76px] w-full md:w-[467px] bg-[#F4CD44] rounded-[5px] text-center font-medium heading-3">Запросите тестовый аудит</button>
+                    <button data-button-text="Запросите тестовый аудит" class="openMainModal cursor-pointer flex items-center justify-center px-5 h-[76px] w-full md:w-[467px] bg-[#F4CD44] rounded-[5px] text-center font-medium heading-3">Запросите тестовый аудит</button>
                 </div>
             </div>
             <div class="flex flex-col gap-7">
@@ -357,7 +357,7 @@
                     <p class="heading-4">Проверьте сотрудников. 7 дней тестового аудита даст вам достаточное представление об их честности и профессионализме</p>
                     <p class="heading-2 font-bold"><span class="text-[#FF8C1C]">Помните:</span> если вы проверяете финансово значимые операции силами штатных сотрудников, выявить сговор практически невозможно: свои покрывают своих</p>
                 </div>
-                <button class="openMainModal cursor-pointer flex items-center justify-center px-5 py-2.5 w-full md:w-[321px] bg-[#F4CD44] rounded-[5px] text-center font-medium heading-3 mx-auto">Запросите тестовый аудит</button>
+                <button data-button-text="Запросите тестовый аудит" class="openMainModal cursor-pointer flex items-center justify-center px-5 py-2.5 w-full md:w-[321px] bg-[#F4CD44] rounded-[5px] text-center font-medium heading-3 mx-auto">Запросите тестовый аудит</button>
             </div>
             <div class="flex flex-col gap-7">
                 <div class="flex max-md:flex-col md:items-center gap-3 md:gap-4 px-4 py-3 bg-gradient-to-r from-[#F89E41] to-[#FFFFFF]">
@@ -397,7 +397,7 @@
                         </tbody>
                     </table>
                 </div>
-                <button class="openMainModal cursor-pointer bg-[#F4CD44] px-5 py-2.5 rounded-[5px] font-medium heading-3 w-fit mx-auto">Получите точный расчёт для своих задач</button>
+                <button data-button-text="Получите точный расчёт для своих задач" class="openMainModal cursor-pointer bg-[#F4CD44] px-5 py-2.5 rounded-[5px] font-medium heading-3 w-fit mx-auto">Получите точный расчёт для своих задач</button>
             </div>
             <div class="flex flex-col gap-7">
                 <div class="flex flex-col gap-5">
@@ -485,16 +485,14 @@
                     <input name="userName" id="userName" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Имя">
                     <input name="userPhone" id="userPhone" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Телефон">
                     <input name="userEmail" id="userEmail" type="email" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Email">
-                    <div class="relative">
-                        <p id="mainPlaseholder" class="absolute top-1/2 -translate-y-1/2 left-4 text-[#8b8d8b] bg-white z-[1] pointer-events-none">Причина обращения</p>
-                        <select name="userReason" id="userReason" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full peer">
-                            <option value="Не выбрано">Не выбрано</option>
-                            <option value="Заказать тестовый аудит">Заказать тестовый аудит</option>
-                            <option value="Запросить расчет стоимости">Запросить расчет стоимости</option>
-                            <option value="Назначить демо-встречу">Назначить демо-встречу</option>
-                            <option value="Ознакомиться с чек-листом контроля">Ознакомиться с чек-листом контроля</option>
-                        </select>
-                    </div>
+                    <select name="userReason" id="userReason" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full peer">
+                        <option disabled selected value="Причина обращения не выбрана">Причина обращения не выбрана</option>
+                        <option value="Заказать тестовый аудит">Заказать тестовый аудит</option>
+                        <option value="Запросить расчет стоимости">Запросить расчет стоимости</option>
+                        <option value="Назначить демо-встречу">Назначить демо-встречу</option>
+                        <option value="Ознакомиться с чек-листом контроля">Ознакомиться с чек-листом контроля</option>
+                    </select>
+                    <input type="text" id="textButton" name="textButton" value="Кнопка не выбрана" class="sr-only">
                 </div>
                 <button id="sumbitModal" class="cursor-pointer w-[188px] h-8 flex items-center justify-center text-base bg-[#F4CD44] rounded-[5px]">Оставить заявку</button>
                 <p class="text-base">Нажимая кнопку, соглашаюсь на <a href="https://disk.yandex.ru/i/X7PQApLPZ5xCXA" target="_blank" class="underline">обработку персональных данных</a> в целях информирования об услугах и содержании договора ООО «АКО».</p>
@@ -534,7 +532,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="openMainModal cursor-pointer py-2.5 px-5 rounded-[5px] bg-[#F4CD44] text-[#15142D] text-base font-medium w-fit">Отправить заявку</button>
+                    <button data-button-text="Отправить заявку" class="openMainModal cursor-pointer py-2.5 px-5 rounded-[5px] bg-[#F4CD44] text-[#15142D] text-base font-medium w-fit">Отправить заявку</button>
                 </div>
                 <div class="flex flex-col gap-10">
                     <div class="flex max-lg:flex-col md:justify-between gap-5 text-base">

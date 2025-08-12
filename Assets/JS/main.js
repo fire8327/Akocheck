@@ -10,18 +10,13 @@ $(".openMainModal").each((i, el) => {
     $(el).click(() => {
         $("#mainModal").show(500)
         $("#overlayModal").show(500)
+        $("#textButton").val($(el).data('button-text'))
     })
 })
 
 $("#closeModal, #overlayModal").click(() => {
     $("#mainModal").hide(500)
     $("#overlayModal").hide(500)
-})
-
-
-/* select */
-$("#userReason").change(() => {
-  $("#mainPlaseholder").addClass("hidden")
 })
 
 
@@ -85,10 +80,11 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
     if(validate.isValid) {
     $("#submitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
     let message = `<b>Заявка с сайта.</b>\n`;
-    message += `<b>Причина обращения: </b> ${this.userReason .value}`;
+    message += `<b>Причина обращения: </b> ${this.userReason.value}\n`;
     message += `<b>Отправитель: </b> ${this.userName.value}\n`;
     message += `<b>Номер телефона: </b> ${this.userPhone.value}\n`;
-    message += `<b>Email: </b> ${this.userEmail .value}`;
+    message += `<b>Email: </b> ${this.userEmail.value}\n`;
+    message += `<b>Кнопка: </b> ${this.textButton.value}`;
 
     axios.post(url, {
         chat_id: chat_id,
@@ -99,7 +95,8 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
         this.userName.value = ""
         this.userPhone.value = ""
         this.userEmail.value = ""
-        this.userReason.value = ""
+        this.userReason.value = "Причина обращения не выбрана"
+        this.textButton.value = ""
         $("#success").show(500)
         setTimeout(() => {
             $("#success").hide(500)
