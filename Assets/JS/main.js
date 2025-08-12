@@ -80,7 +80,7 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
     $("#submitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
     let message = `<b>Заявка с сайта.</b>\n`;
     message += `<b>Отправитель: </b> ${this.userName.value}\n`;
-    message += `<b>Номер телефона: </b> ${this.userPhone.value}`;
+    message += `<b>Номер телефона: </b> ${this.userPhone.value}\n`;
     message += `<b>Email: </b> ${this.userEmail .value}`;
 
     axios.post(url, {
