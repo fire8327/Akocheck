@@ -19,6 +19,12 @@ $("#closeModal, #overlayModal").click(() => {
 })
 
 
+/* select */
+$("#userReason").change(() => {
+  $("#mainPlaseholder").addClass("hidden")
+})
+
+
 /* validate */
 const validate = new JustValidate('#mainModal', {
     validateBeforeSubmitting: true,
@@ -79,6 +85,7 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
     if(validate.isValid) {
     $("#submitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
     let message = `<b>Заявка с сайта.</b>\n`;
+    message += `<b>Причина обращения: </b> ${this.userReason .value}`;
     message += `<b>Отправитель: </b> ${this.userName.value}\n`;
     message += `<b>Номер телефона: </b> ${this.userPhone.value}\n`;
     message += `<b>Email: </b> ${this.userEmail .value}`;
@@ -92,6 +99,7 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
         this.userName.value = ""
         this.userPhone.value = ""
         this.userEmail.value = ""
+        this.userReason.value = ""
         $("#success").show(500)
         setTimeout(() => {
             $("#success").hide(500)
@@ -99,6 +107,7 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
         $("#mainModal").hide(500)
         $("#overlayModal").hide(500)
         $("#submitModal").removeClass("opacity-50 cursor-not-allowed").prop('disabled', false)
+        $("#mainPlaseholder").removeClass("hidden")
     })
     .catch((err) => {
         console.warn(err);

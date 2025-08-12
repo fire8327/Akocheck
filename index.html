@@ -481,13 +481,23 @@
                     <img src="Assets/Images/modal/close.svg" alt="" class="w-8">
                 </button>
                 <p>Оставить заявку</p>
-                <div class="flex flex-col gap-2 w-full">
+                <div class="flex flex-col gap-2 w-full text-base">
                     <input name="userName" id="userName" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Имя">
                     <input name="userPhone" id="userPhone" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Телефон">
                     <input name="userEmail" id="userEmail" type="email" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Email">
+                    <div class="relative">
+                        <p id="mainPlaseholder" class="absolute top-1/2 -translate-y-1/2 left-4 text-[#8b8d8b] bg-white z-[1] pointer-events-none">Причина обращения</p>
+                        <select name="userReason" id="userReason" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full peer">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Заказать тестовый аудит">Заказать тестовый аудит</option>
+                            <option value="Запросить расчет стоимости">Запросить расчет стоимости</option>
+                            <option value="Назначить демо-встречу">Назначить демо-встречу</option>
+                            <option value="Ознакомиться с чек-листом контроля">Ознакомиться с чек-листом контроля</option>
+                        </select>
+                    </div>
                 </div>
                 <button id="sumbitModal" class="cursor-pointer w-[188px] h-8 flex items-center justify-center text-base bg-[#F4CD44] rounded-[5px]">Оставить заявку</button>
-                <p>Нажимая кнопку, соглашаюсь на <a href="https://disk.yandex.ru/i/X7PQApLPZ5xCXA" target="_blank" class="underline">обработку персональных данных</a> в целях информирования об услугах и содержании договора ООО «АКО».</p>
+                <p class="text-base">Нажимая кнопку, соглашаюсь на <a href="https://disk.yandex.ru/i/X7PQApLPZ5xCXA" target="_blank" class="underline">обработку персональных данных</a> в целях информирования об услугах и содержании договора ООО «АКО».</p>
             </div>
         </form>   
         <div id="success" class="hidden">
