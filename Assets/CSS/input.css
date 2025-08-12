@@ -60,3 +60,25 @@ body {
 .route-active {
     @apply relative after:w-full after:h-px after:left-0 after:absolute after:bg-[#F99D41] after:-bottom-2
 }
+
+.responsive-width {
+    width: 71%;
+}
+
+@media (min-width: 1280px) {
+    .responsive-width {
+        width: 78%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .responsive-width {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1536px) {
+    .responsive-width {
+        width: 81%;
+    }
+}
