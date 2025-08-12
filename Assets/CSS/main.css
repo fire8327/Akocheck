@@ -203,11 +203,17 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .top-6 {
+    top: calc(var(--spacing) * 6);
+  }
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
   .top-\[75px\] {
     top: 75px;
+  }
+  .right-6 {
+    right: calc(var(--spacing) * 6);
   }
   .right-10 {
     right: calc(var(--spacing) * 10);
@@ -423,6 +429,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-not-allowed {
+    cursor: not-allowed;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -750,6 +759,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .opacity-60 {
     opacity: 60%;

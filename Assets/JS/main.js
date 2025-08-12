@@ -31,8 +31,8 @@ validate
     },
     {
       rule: 'customRegexp',
-      value: /^[А-Я]+$/i,      
-      errorMessage: 'Поле Имя должно содержать только кириллицу',
+      value: /^[А-Я\s\-]+$/i,      
+      errorMessage: 'Поле Имя должно содержать только кириллицу, пробелы и дефисы',
     },    
     {
       rule: 'minLength',
@@ -69,14 +69,15 @@ validate
 
 
 /* submit form */
-const token = "6688184188:AAGzlkIWoBx9zuXSh71W6Jl_5Woat_RzxlU"
-const chat_id = "-920280170"
+const token = "7928469961:AAHT1gppJpIZPZLltJkm_UQcnhvL5sjGw2o"
+const chat_id = "-4878197828"
 const url = `https://api.telegram.org/bot${token}/sendMessage`
 
 document.getElementById("mainModal").addEventListener("submit", function (e) {
     e.preventDefault();
 
     if(validate.isValid) {
+    $("#submitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
     let message = `<b>Заявка с сайта.</b>\n`;
     message += `<b>Отправитель: </b> ${this.userName.value}\n`;
     message += `<b>Номер телефона: </b> ${this.userPhone.value}`;
@@ -90,11 +91,14 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
     .then((res) => {
         this.userName.value = ""
         this.userPhone.value = ""
-        this.userEmail  .value = ""
+        this.userEmail.value = ""
         $("#success").show(500)
         setTimeout(() => {
             $("#success").hide(500)
         }, 3000);
+        $("#mainModal").hide(500)
+        $("#overlayModal").hide(500)
+        $("#submitModal").removeClass("opacity-50 cursor-not-allowed").prop('disabled', false)
     })
     .catch((err) => {
         console.warn(err);
