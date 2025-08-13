@@ -20,6 +20,13 @@ $("#closeModal, #overlayModal").click(() => {
 })
 
 
+/* form overlay */
+$("#overlayModal").click(() => {
+  $("#success").hide(500)
+  $("#overlayModal").hide(500)
+})
+
+
 /* validate */
 const validate = new JustValidate('#mainModal', {
     validateBeforeSubmitting: true,
