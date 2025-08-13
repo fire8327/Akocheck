@@ -97,14 +97,13 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
         this.userEmail.value = ""
         this.userReason.value = "Причина обращения не выбрана"
         this.textButton.value = ""
+        $("#mainModal").hide(500)
         $("#success").show(500)
         setTimeout(() => {
             $("#success").hide(500)
+            $("#overlayModal").hide(500)
         }, 3000);
-        $("#mainModal").hide(500)
-        $("#overlayModal").hide(500)
         $("#submitModal").removeClass("opacity-50 cursor-not-allowed").prop('disabled', false)
-        $("#mainPlaseholder").removeClass("hidden")
     })
     .catch((err) => {
         console.warn(err);
