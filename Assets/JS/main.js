@@ -30,6 +30,7 @@ $("#overlayModal").click(() => {
 /* services menu */
 $("#servicesToggler").click(() => {
     $("#servicesMenu").toggleClass("opacity-0")
+    $("#servicesToggler").find("img").toggleClass("rotate-180")
 })
 
 /* validate */
