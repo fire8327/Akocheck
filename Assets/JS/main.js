@@ -27,6 +27,11 @@ $("#overlayModal").click(() => {
 })
 
 
+/* services menu */
+$("#servicesToggler").click(() => {
+    $("#servicesMenu").toggleClass("opacity-0")
+})
+
 /* validate */
 const validate = new JustValidate('#mainModal', {
     validateBeforeSubmitting: true,
