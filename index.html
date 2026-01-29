@@ -35,12 +35,12 @@
             <div id="menu" class="flex items-center gap-6 lg:justify-between py-5 z-[5] max-lg:absolute max-lg:w-full max-lg:left-0 max-lg:top-0 max-lg:-translate-y-full transition-all duration-500 max-lg:flex-col max-lg:bg-[#15142D] max-lg:py-6">
                 <a href="https://akocheck.ru/prices.html" class="w-[106px] h-8 flex items-center justify-center text-sm text-white border border-[#F99D41] rounded-[5px]">Цены</a>
                 <div class="flex max-md:flex-col items-center gap-12 text-white text-sm">
-                    <div class="relative">
+                    <div id="servicesContainer" class="relative overflow-hidden">
                         <button id="servicesToggler" class="flex items-center gap-2 w-fit cursor-pointer">
                             <span>Услуги</span>
                             <img src="Assets/Images/header/arrow.svg" alt="" class="transition-all duration-300">
                         </button>
-                        <div id="servicesMenu" class="rounded-xl bg-[#15142D] flex flex-col gap-1.5 absolute top-full p-4 opacity-0 overflow-hidden transition-all duration-500 left-1/2 max-sm:-translate-x-1/2 w-[calc(100vw-40px)] sm:w-[350px]">
+                        <div id="servicesMenu" class="rounded-xl bg-[#15142D] border border-white/10 flex flex-col gap-1.5 absolute top-[calc(100%+15px)] p-4 opacity-0 overflow-hidden transition-all duration-500 left-1/2 max-sm:-translate-x-1/2 w-[calc(100vw-40px)] sm:w-[350px]">
                             <a href="https://akocheck.ru/service1.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
                                 <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
                                 <span>Аудит кассовых операций</span>

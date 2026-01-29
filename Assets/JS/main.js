@@ -49,8 +49,18 @@ $("#overlayModal").click(() => {
 
 /* services menu */
 $("#servicesToggler").click(() => {
+  $("#servicesToggler").find("img").toggleClass("rotate-180")
+  if($("#servicesContainer").hasClass("overflow-hidden")) {
+    $("#servicesContainer").toggleClass("overflow-hidden")
+    setTimeout(() => {
+      $("#servicesMenu").toggleClass("opacity-0")
+    }, 200);
+  } else {
     $("#servicesMenu").toggleClass("opacity-0")
-    $("#servicesToggler").find("img").toggleClass("rotate-180")
+    setTimeout(() => {
+      $("#servicesContainer").toggleClass("overflow-hidden")
+    }, 200);
+  }
 })
 
 /* validate */
