@@ -29,6 +29,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --leading-relaxed: 1.625;
     --radius-xl: 0.75rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -220,6 +221,12 @@
   .top-full {
     top: 100%;
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -252,6 +259,9 @@
   }
   .z-\[7\] {
     z-index: 7;
+  }
+  .z-\[8\] {
+    z-index: 8;
   }
   .col-span-full {
     grid-column: 1 / -1;
@@ -291,6 +301,9 @@
   }
   .ml-auto {
     margin-left: auto;
+  }
+  .block {
+    display: block;
   }
   .flex {
     display: flex;
@@ -454,6 +467,9 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
   .flex-grow {
     flex-grow: 1;
   }
@@ -608,6 +624,10 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
   .border-r {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
@@ -622,6 +642,9 @@
   }
   .border-\[\#F4CD44\] {
     border-color: #F4CD44;
+  }
+  .border-\[\#F7A541\] {
+    border-color: #F7A541;
   }
   .border-\[\#F99D41\] {
     border-color: #F99D41;
@@ -796,6 +819,10 @@
     --tw-leading: 100%;
     line-height: 100%;
   }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -838,6 +865,10 @@
   .opacity-60 {
     opacity: 60%;
   }
+  .shadow-\[0_-4px_20px_rgba\(0\,0\,0\,0\.2\)\] {
+    --tw-shadow: 0 -4px 20px var(--tw-shadow-color, rgba(0,0,0,0.2));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-\[0px_0px_13px_-7px_black\] {
     --tw-shadow: 0px 0px 13px -7px var(--tw-shadow-color, black);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -848,6 +879,16 @@
   }
   .transition-all {
     transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
@@ -881,6 +922,20 @@
   .even\:bg-\[\#FFD7AD\] {
     &:nth-child(even) {
       background-color: #FFD7AD;
+    }
+  }
+  .hover\:bg-\[\#F7A541\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #F7A541;
+      }
+    }
+  }
+  .hover\:text-\[\#F4CD44\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #F4CD44;
+      }
     }
   }
   .hover\:text-\[\#F7A541\] {
@@ -1094,6 +1149,11 @@
       grid-template-columns: repeat(auto-fit,minmax(150px,auto));
     }
   }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
   .md\:items-center {
     @media (width >= 48rem) {
       align-items: center;
@@ -1129,6 +1189,11 @@
       gap: 60px;
     }
   }
+  .md\:py-3 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 3);
+    }
+  }
   .md\:py-7 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 7);
@@ -1143,6 +1208,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .md\:text-base {
+    @media (width >= 48rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .md\:text-xl {

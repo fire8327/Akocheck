@@ -1,3 +1,23 @@
+/* cookie consent */
+(function () {
+    const banner = document.getElementById('cookieConsent');
+    const acceptBtn = document.getElementById('cookieAccept');
+    const storageKey = 'akocheck_cookies_accepted';
+    if (banner) {
+        banner.style.display = localStorage.getItem(storageKey) ? 'none' : 'block';
+    }
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', function () {
+            localStorage.setItem(storageKey, 'true');
+            if (banner) {
+                banner.style.transform = 'translateY(100%)';
+                setTimeout(function () { banner.style.display = 'none'; }, 500);
+            }
+        });
+    }
+})();
+
+
 /* mobile menu */
 $("#toggler, #overlay").click(() => {
     $("#menu").toggleClass("max-lg:top-0 max-lg:top-full max-lg:-translate-y-full")
