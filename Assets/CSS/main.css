@@ -498,6 +498,9 @@
   .list-inside {
     list-style-position: inside;
   }
+  .list-disc {
+    list-style-type: disc;
+  }
   .list-image-\[url\(\.\.\/Images\/index\/list\.svg\)\] {
     list-style-image: url(../Images/index/list.svg);
   }
