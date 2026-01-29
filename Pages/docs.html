@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика обработки персональных данных</title>
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+</head>
+<body>
+    <header class="w-full bg-[#15142D] relative bg-[url(img/header/bg.png)] bg-left lg:bg-right bg-no-repeat">
+        <div class="grid-container">
+            <div class="flex items-center justify-between py-4 md:py-7 gap-16 xl:gap-24">
+                <a href="#">
+                    <img src="../Assets/Images/header/logo.png" alt="" class="w-40 md:w-[200px]">
+                </a>
+                <div class="flex max-lg:flex-col gap-2 lg:justify-between lg:grow max-lg:hidden">
+                    <a href="mailto:info@akocheck.ru" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/mail.svg" alt="">
+                        <span>info@akocheck.ru</span>
+                    </a>
+                    <a href="#" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/tg.svg" alt="">
+                        <span>@akocheck_bot</span>
+                    </a>
+                    <a href="tel:+74952408674" target="_blank"  class="text-[#F99D41] font-bold heading-2">+7(495) 240-8674</a>
+                </div>
+                <button id="toggler" class="lg:hidden">
+                    <img src="../Assets/Images/header/menu.svg" alt="" class="w-8">
+                </button>
+            </div>
+            <div id="overlay" class="bg-black/30 fixed inset-0 top-[75px] md:top-[109px] z-[3] max-lg:hidden lg:hidden"></div>
+        </div>
+        <div class="w-full h-px bg-[#F7A541]"></div>
+        <div class="grid-container">
+            <div id="menu" class="flex items-center gap-6 lg:justify-between py-5 z-[5] max-lg:absolute max-lg:w-full max-lg:left-0 max-lg:top-0 max-lg:-translate-y-full transition-all duration-500 max-lg:flex-col max-lg:bg-[#15142D] max-lg:py-6">
+                <a href="https://akocheck.ru/prices.html" class="w-[106px] h-8 flex items-center justify-center text-sm text-white border border-[#F99D41] rounded-[5px]">Цены</a>
+                <div class="flex max-md:flex-col items-center gap-12 text-white text-sm">
+                    <div class="relative">
+                        <button id="servicesToggler" class="flex items-center gap-2 w-fit cursor-pointer">
+                            <span>Услуги</span>
+                            <img src="../Assets/Images/header/arrow.svg" alt="" class="transition-all duration-300">
+                        </button>
+                        <div id="servicesMenu" class="rounded-xl bg-[#15142D] flex flex-col gap-1.5 absolute top-full p-4 opacity-0 overflow-hidden transition-all duration-500 left-1/2 max-sm:-translate-x-1/2w-[calc(100vw-40px)] sm:w-[350px]">
+                            <a href="https://akocheck.ru/service1.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Аудит кассовых операций</span>
+                            </a>
+                            <a href="https://akocheck.ru/service2.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Просмотр видеокамер в магазинах</span>
+                            </a>
+                            <a href="https://akocheck.ru/service3.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Просмотр видеокамер в ресторанах</span>
+                            </a>
+                            <a href="https://akocheck.ru/service4.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Комплексный экспресс-аудит</span>
+                            </a>
+                            <a href="https://akocheck.ru/service5.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>ПО CheckViewer</span>
+                            </a>
+                            <a href="https://akocheck.ru/service6.html" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>ПО CheckClient</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://akocheck.ru/service1.html" class="w-fit">Технология</a>
+                    <a href="#" class="w-fit">Аудиоаналитика</a>
+                    <a href="https://akocheck.ru/service4.html" class="w-fit route-active">Тестовый аудит</a>
+                </div>
+                <a href="https://ako-checkclient.ru/" class="w-[188px] h-8 flex items-center justify-center text-sm bg-[#F4CD44] rounded-[5px]">Личный кабинет</a>
+                <div class="flex flex-col gap-2 lg:hidden">
+                    <a href="mailto:info@akocheck.ru" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/mail.svg" alt="">
+                        <span>info@akocheck.ru</span>
+                    </a>
+                    <a href="#" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/tg.svg" alt="">
+                        <span>@akocheck_bot</span>
+                    </a>
+                    <a href="tel:+74952408674" target="_blank"  class="text-[#F99D41] font-bold heading-2">+7(495) 240-8674</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="my-10">
+        <div class="grid-container gap-y-16">
+           <div class="flex flex-col gap-2 w-full heading-4">
+                <a href="../Assets/Docs/1. Инструкция по установке ПО.pdf" target="_blank" class="flex items-center justify-between border-b w-full">
+                    <span>Инструкция по установке ПО</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-medium">.pdf</span>
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M12 3V16M12 16L16 11.625M12 16L8 11.625" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <a href="../Assets/Docs/2. Инструкция по эксплуатации .pdf" target="_blank" class="flex items-center justify-between border-b w-full">
+                    <span>Инструкция по эксплуатации</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-medium">.pdf</span>
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M12 3V16M12 16L16 11.625M12 16L8 11.625" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <a href="../Assets/Docs/3_Описание_функциональных_характеристик_ПО_.pdf" target="_blank" class="flex items-center justify-between border-b w-full">
+                    <span>писание функциональных характеристик ПО</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-medium">.pdf</span>
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M12 3V16M12 16L16 11.625M12 16L8 11.625" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+           </div>
+        </div>
+    </main>
+
+    <section>
+         <!-- модальное окно -->
+         <form id="mainModal" autocomplete="off" novalidate="novalidate" class="fixed w-[calc(100vw-30px)] z-[7] hidden md:w-1/2 xl:w-1/3 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+            <div class="text-lg items-center rounded-xl bg-white p-4 flex flex-col gap-6 w-full">
+                <button type="button" id="closeModal" class="ml-auto cursor-pointer">
+                    <img src="../Assets/Images/modal/close.svg" alt="" class="w-8">
+                </button>
+                <p>Оставить заявку</p>
+                <div class="flex flex-col gap-2 w-full text-base">
+                    <input name="userName" id="userName" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Имя">
+                    <input name="userPhone" id="userPhone" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Телефон">
+                    <input name="userEmail" id="userEmail" type="email" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Email">
+                    <select name="userReason" id="userReason" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full peer">
+                        <option disabled selected value="Причина обращения не выбрана">Причина обращения не выбрана</option>
+                        <option value="Заказать тестовый аудит">Заказать тестовый аудит</option>
+                        <option value="Запросить расчет стоимости">Запросить расчет стоимости</option>
+                        <option value="Назначить демо-встречу">Назначить демо-встречу</option>
+                        <option value="Ознакомиться с чек-листом контроля">Ознакомиться с чек-листом контроля</option>
+                    </select>
+                    <input type="text" id="textButton" name="textButton" value="Кнопка не выбрана" class="sr-only">
+                </div>
+                <button id="sumbitModal" class="cursor-pointer w-[188px] h-8 flex items-center justify-center text-base bg-[#F4CD44] rounded-[5px]">Оставить заявку</button>
+                <p class="text-base">Нажимая кнопку, соглашаюсь на <a href="https://disk.yandex.ru/i/X7PQApLPZ5xCXA" target="_blank" class="underline">обработку персональных данных</a> в целях информирования об услугах и содержании договора ООО «АКО».</p>
+            </div>
+        </form>   
+        <div id="success" class="hidden">
+            <div class="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[280px] z-10 flex flex-col text-base gap-4 bg-white text-black rounded-xl py-6 px-4 shadow-[0px_0px_13px_-7px_black]">
+                <img src="../Assets/Images/icons/info.svg" alt="" class="w-4">
+                <p>Ваше обращение успешно зарегистрировано! В ближайшее время мы с вами свяжемся.</p>
+            </div>
+        </div>
+        <div id="overlayModal" class="bg-black/30 fixed inset-0 z-[6] hidden"></div>   
+    </section>
+
+    <footer class="w-full bg-[#1F1D35] text-white relative mt-auto">
+        <div class="grid-container mt-[133px]">
+            <div class="flex flex-col gap-16 relative z-[3] pb-9">
+                <div class="flex flex-col gap-5 md:items-center">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-bold heading-3 md:text-center">Оперативная связь</p>
+                        <div class="flex max-md:flex-col md:items-center gap-6 md:gap-[60px]">
+                            <a href="tel:+74952408674" class="flex items-center gap-2">
+                                <img src="../Assets/Images/footer/tel.svg" alt="">
+                                <span class="text-base">+7 (495) 240-86-74</span>
+                            </a>
+                            <a href="mailto:info@akospb.su" class="flex items-center gap-2">
+                                <img src="../Assets/Images/footer/mail.svg" alt="">
+                                <span class="text-base">info@akospb.su</span>
+                            </a>
+                            <div class="flex items-center md:gap-[60px] gap-6">
+                                <a href="#" target="_blank">
+                                    <img src="../Assets/Images/footer/tg.svg" alt="">
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img src="../Assets/Images/footer/whatsapp.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-button-text="Отправить заявку" class="openMainModal cursor-pointer py-2.5 px-5 rounded-[5px] bg-[#F4CD44] text-[#15142D] text-base font-semibold w-fit">Отправить заявку</button>
+                </div>
+                <div class="flex flex-col gap-10">
+                    <div class="flex max-lg:flex-col md:justify-between gap-5 text-base">
+                        <a href="https://akocheck.ru/about.html">О компании</a>
+                        <div class="flex flex-col gap-5">
+                            <a href="https://akocheck.ru/service2.html">Ритейлу</a>
+                            <a href="https://akocheck.ru/service3.html">Ресторанам</a>
+                            <a href="#">Производствам и складам</a>
+                            <a href="#">Аудиоаналитика</a>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <a href="https://akocheck.ru/service1.html">Технология</a>
+                            <a href="https://akocheck.ru/service6.html">Система CheckClient</a>
+                            <a href="https://akocheck.ru/service5.html">Система CheckViewer</a>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <p class="max-lg:mt-4">
+                                © АКО 2011-2025 <br>
+                                ИНН 7806465854 <br>
+                                ОГРН 1117847500022
+                            </p>
+                            <div class="flex gap-px items-start max-lg:mt-4">
+                                <img src="../Assets/Images/footer/locate.svg" alt="">
+                                <p>
+                                    Санкт-Петербург, 194064 <br>
+                                    Тихорецкий проспект 17Б, оф.9
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex max-md:flex-col md:items-center md:justify-center gap-5 md:gap-7 text-base font-semibold">
+                        <button class="flex items-center justify-center border-2 border-[#F99D41] h-8 w-[200px] rounded-[5px]">
+                            Аудиоаналитика
+                        </button>
+                        <a href="https://akocheck.ru/service4.html" class="flex items-center justify-center border-2 border-[#F99D41] h-8 w-[200px] rounded-[5px]">
+                            Тестовый аудит
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../Assets/Images/footer/bg.png" alt="" class="absolute top-0 left-0 z-[2] w-full">
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
