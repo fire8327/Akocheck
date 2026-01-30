@@ -109,7 +109,13 @@ validate
       rule: 'email',
       errorMessage: 'Введите корректный email адрес',
     }
-]);
+  ])
+  .addField('#consent', [
+    {
+      rule: 'required',
+      errorMessage: 'Необходимо согласие на обработку персональных данных',
+    }
+  ]);
 
 
 /* submit form */
