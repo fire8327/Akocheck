@@ -118,6 +118,36 @@ validate
   ]);
 
 
+// Добавьте этот код в $(document).ready()
+$(document).ready(function() {
+  const $consentCheckbox = $('#consent');
+  const $submitButton = $('#sumbitModal');
+  
+  function updateButtonState() {
+      if ($consentCheckbox.is(':checked')) {
+          $submitButton.prop('disabled', false)
+              .removeClass('opacity-50 cursor-not-allowed')
+              .addClass('cursor-pointer');
+      } else {
+          $submitButton.prop('disabled', true)
+              .addClass('opacity-50 cursor-not-allowed')
+              .removeClass('cursor-pointer');
+      }
+  }
+  
+  // Инициализация
+  updateButtonState();
+  
+  // Обработчик изменения чекбокса
+  $consentCheckbox.on('change', updateButtonState);
+  
+  // Также обновляем при изменениях через валидацию
+  validate.onValidate(function(isValid, fields) {
+      updateButtonState();
+  });
+});
+
+
 /* submit form */
 const token = "7928469961:AAHT1gppJpIZPZLltJkm_UQcnhvL5sjGw2o"
 const chat_id = "-4878197828"
