@@ -439,6 +439,9 @@
   .h-36 {
     height: calc(var(--spacing) * 36);
   }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
   .h-\[52px\] {
     height: 52px;
   }
@@ -756,6 +759,12 @@
   .border-\[\#F4CD44\] {
     border-color: #F4CD44;
   }
+  .border-\[\#F4CD44\]\/20 {
+    border-color: color-mix(in oklab, #F4CD44 20%, transparent);
+  }
+  .border-\[\#F4CD44\]\/30 {
+    border-color: color-mix(in oklab, #F4CD44 30%, transparent);
+  }
   .border-\[\#F7A541\] {
     border-color: #F7A541;
   }
@@ -1018,8 +1027,14 @@
   .text-\[\#15142D\] {
     color: #15142D;
   }
+  .text-\[\#F4CD4\] {
+    color: #F4CD4;
+  }
   .text-\[\#F4CD44\] {
     color: #F4CD44;
+  }
+  .text-\[\#F4\] {
+    color: #F4;
   }
   .text-\[\#F99D41\] {
     color: #F99D41;
@@ -1449,9 +1464,19 @@
       gap: calc(var(--spacing) * 7);
     }
   }
+  .md\:gap-10 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
   .md\:gap-\[60px\] {
     @media (width >= 48rem) {
       gap: 60px;
+    }
+  }
+  .md\:self-end {
+    @media (width >= 48rem) {
+      align-self: flex-end;
     }
   }
   .md\:py-3 {
