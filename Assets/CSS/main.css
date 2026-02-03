@@ -1061,6 +1061,9 @@
   .bg-cover {
     background-size: cover;
   }
+  .bg-center {
+    background-position: center;
+  }
   .bg-left {
     background-position: left;
   }
