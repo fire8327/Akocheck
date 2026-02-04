@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | АКО</title>
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="w-full bg-[#15142D] relative bg-[url(img/header/bg.png)] bg-left lg:bg-right bg-no-repeat">
+        <div class="grid-container">
+            <div class="flex items-center justify-between py-4 md:py-7 gap-16 xl:gap-24">
+                <a href="index.html">
+                    <img src="../Assets/Images/header/logo.png" alt="" class="w-40 md:w-[200px]">
+                </a>
+                <div class="flex max-lg:flex-col gap-2 lg:justify-between lg:grow max-lg:hidden">
+                    <a href="mailto:info@akocheck.ru" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/mail.svg" alt="">
+                        <span>info@akocheck.ru</span>
+                    </a>
+                    <a href="https://t.me/akocheck_bot" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/tg.svg" alt="">
+                        <span>@akocheck_bot</span>
+                    </a>
+                    <a href="tel:+74952408674" target="_blank"  class="text-[#F99D41] font-bold heading-2">+7(495) 240-8674</a>
+                </div>
+                <button id="toggler" class="lg:hidden">
+                    <img src="../Assets/Images/header/menu.svg" alt="" class="w-8">
+                </button>
+            </div>
+            <div id="overlay" class="bg-black/30 fixed inset-0 top-[75px] md:top-[109px] z-[3] max-lg:hidden lg:hidden"></div>
+        </div>
+        <div class="w-full grid-container">
+            <div class="w-full h-px bg-[#F7A541]"></div>
+        </div>
+        <div class="grid-container">
+            <div id="menu" class="flex items-center gap-6 lg:justify-between py-5 z-[5] max-lg:absolute max-lg:w-full max-lg:left-0 max-lg:top-0 max-lg:-translate-y-full transition-all duration-500 max-lg:flex-col max-lg:bg-[#15142D] max-lg:py-6">
+                <a href="prices.html" class="w-[106px] h-8 flex items-center justify-center text-sm text-white border border-[#F99D41] rounded-[5px]">Цены</a>
+                <div class="flex max-md:flex-col items-center gap-12 text-white text-sm">
+                    <div id="servicesContainer" class="relative overflow-hidden">
+                        <button id="servicesToggler" class="flex items-center gap-2 w-fit cursor-pointer">
+                            <span>Услуги</span>
+                            <img src="../Assets/Images/header/arrow.svg" alt="" class="transition-all duration-300">
+                        </button>
+                        <div id="servicesMenu" class="z-[1] rounded-xl bg-[#15142D] border border-white/10 flex flex-col gap-1.5 absolute top-[calc(100%+15px)] p-4 opacity-0 overflow-hidden transition-all duration-500 left-1/2 max-sm:-translate-x-1/2 w-[calc(100vw-40px)] sm:w-[350px]">
+                            <a href="service1.html" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Аудит кассовых операций</span>
+                            </a>
+                            <a href="service2.html" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Просмотр видеокамер в магазинах</span>
+                            </a>
+                            <a href="service3.html" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Просмотр видеокамер в ресторанах</span>
+                            </a>
+                            <a href="service4.html" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>Комплексный экспресс-аудит</span>
+                            </a>
+                            <a href="service5.html" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>ПО CheckViewer</span>
+                            </a>
+                            <a href="service6.html" class="flex items-center gap-2 transition-all duration-300 hover:text-[#F7A541]">
+                                <span class="w-2.5 h-2.5 bg-[#F4CD44] rounded-full"></span>
+                                <span>ПО CheckClient</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="service1.html" class="w-fit">Технология</a>
+                    <a href="#" class="w-fit">Аудиоаналитика</a>
+                    <a href="service4.html" class="w-fit route-active">Тестовый аудит</a>
+                </div>
+                <a href="https://ako-checkclient.ru/" class="w-[188px] h-8 flex items-center justify-center text-sm bg-[#F4CD44] rounded-[5px]">Личный кабинет</a>
+                <div class="flex flex-col gap-2 lg:hidden">
+                    <a href="mailto:info@akocheck.ru" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/mail.svg" alt="">
+                        <span>info@akocheck.ru</span>
+                    </a>
+                    <a href="https://t.me/akocheck_bot" target="_blank" class="flex items-center gap-2 md:gap-2.5 font-bold text-white heading-4">
+                        <img src="../Assets/Images/header/tg.svg" alt="">
+                        <span>@akocheck_bot</span>
+                    </a>
+                    <a href="tel:+74952408674" target="_blank"  class="text-[#F99D41] font-bold heading-2">+7(495) 240-8674</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="my-12 md:my-16">
+        <div class="grid-container gap-y-10">
+            <div class="flex flex-col gap-1">
+                <p class="heading-1 font-medium text-[#15142D] tracking-tight">Контакты</p>
+                <p class="text-sm text-[#15142D]/60">Офисы в Москве и Санкт-Петербурге</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
+                <!-- Санкт-Петербург -->
+                <article class="px-4 py-6 group flex max-lg:flex-col lg:justify-between relative bg-white rounded-2xl border border-[#15142D]/8 shadow-[0_1px_3px_0_rgba(21,20,45,0.06)] overflow-hidden transition-shadow hover:shadow-[0_4px_20px_-4px_rgba(21,20,45,0.12)]">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#F4CD44]"></div>
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-[#F4CD44] mb-5">Санкт-Петербург</p>
+                        <div class="space-y-5 text-[#15142D]">
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://akocheck.ru/img/phone-yellow.svg" alt="" class="w-4">
+                                    <p class="text-xs font-medium text-[#15142D]/50">Связь</p>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <a href="tel:+74952408674" class="text-base hover:text-[#F99D41] transition-colors">+7 (495) 240-86-74</a>
+                                    <a href="mailto:info@akospb.su" class="text-base hover:text-[#F99D41] transition-colors">info@akospb.su</a>
+                                    <a href="http://akospb.su/" target="_blank" class="text-base hover:text-[#F99D41] transition-colors">akospb.su</a>
+                                    <a href="https://checkviewer.ru/" target="_blank" class="text-base hover:text-[#F99D41] transition-colors">checkviewer.ru</a>
+                                    <a href="https://fb.com/akospb" target="_blank" class="text-base hover:text-[#F99D41] transition-colors">fb.com/akospb</a>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://akocheck.ru/img/marker-yellow.svg" alt="" class="w-4">
+                                    <p class="text-xs font-medium text-[#15142D]/50">Адрес</p>
+                                </div>
+                                <p class="text-base leading-relaxed">194064, Санкт-Петербург,<br>Тихорецкий проспект 17Б, оф.9</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 max-lg:mt-6 shrink-0 h-[280px] lg:h-[320px] overflow-hidden rounded-xl" id="map-spb"></div>
+                </article>
+                <!-- Москва -->
+                <article class="px-4 py-6 group flex max-lg:flex-col lg:justify-between relative bg-[#15142D] rounded-2xl border border-[#15142D]/8 overflow-hidden transition-shadow hover:shadow-[0_4px_24px_-4px_rgba(0,0,0,0.4)]">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#F4CD44]"></div>
+                    <div class="text-white">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-[#F4CD44] mb-5">Москва</p>
+                        <div class="space-y-5">
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://akocheck.ru/img/phone-yellow.svg" alt="" class="w-4">
+                                    <p class="text-xs font-medium text-white/50">Связь</p>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <a href="tel:+74952408674" class="text-base text-white/90 hover:text-[#F4CD44] transition-colors">+7 (495) 240-86-74</a>
+                                    <a href="mailto:info@akospb.su" class="text-base text-white/90 hover:text-[#F4CD44] transition-colors">info@akospb.su</a>
+                                    <a href="http://akospb.su/" target="_blank" class="text-base text-white/90 hover:text-[#F4CD44] transition-colors">akospb.su</a>
+                                    <a href="https://checkviewer.ru/" target="_blank" class="text-base text-white/90 hover:text-[#F4CD44] transition-colors">checkviewer.ru</a>
+                                    <a href="https://fb.com/akospb" target="_blank" class="text-base text-white/90 hover:text-[#F4CD44] transition-colors">fb.com/akospb</a>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://akocheck.ru/img/marker-yellow.svg" alt="" class="w-4">
+                                    <p class="text-xs font-medium text-white/50">Адрес</p>
+                                </div>
+                                <p class="text-base leading-relaxed text-white/90">143441, Москва, Красногорский район, п/о Путилково, 72 км МКАД, Бизнес-парк «Гринвуд», строение 19, 4 этаж</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 max-lg:mt-6 shrink-0 h-[280px] lg:h-[320px] overflow-hidden rounded-xl" id="map-msk"></div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <!-- модальное окно -->
+        <form id="mainModal" autocomplete="off" novalidate="novalidate" class="fixed w-[calc(100vw-30px)] z-[7] hidden md:w-1/2 xl:w-1/3 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+           <div class="text-lg items-center rounded-xl bg-white p-4 flex flex-col gap-6 w-full">
+               <button type="button" id="closeModal" class="ml-auto cursor-pointer">
+                   <img src="../Assets/Images/modal/close.svg" alt="" class="w-8">
+               </button>
+               <p>Оставить заявку</p>
+               <div class="flex flex-col gap-2 w-full text-base max-h-[70vh] overflow-y-auto">
+                   <input name="userName" id="userName" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Имя">
+                   <input name="userPhone" id="userPhone" type="text" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Телефон">
+                   <input name="userEmail" id="userEmail" type="email" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full" placeholder="Email">
+                   <select name="userReason" id="userReason" class="px-4 py-2 rounded-xl border border-[#F4CD44] w-full peer">
+                       <option disabled selected value="Причина обращения не выбрана">Причина обращения не выбрана</option>
+                       <option value="Заказать тестовый аудит">Заказать тестовый аудит</option>
+                       <option value="Запросить расчет стоимости">Запросить расчет стоимости</option>
+                       <option value="Назначить демо-встречу">Назначить демо-встречу</option>
+                       <option value="Ознакомиться с чек-листом контроля">Ознакомиться с чек-листом контроля</option>
+                   </select>
+                   <input type="text" id="textButton" name="textButton" value="Кнопка не выбрана" class="sr-only">
+                   <label class="flex items-start gap-2 text-base cursor-pointer group">
+                       <input type="checkbox" name="consent" id="consent" class="sr-only" required>
+                       <div class="w-4 h-4 rounded-sm border border-black/30 group-has-[:checked]:border-[#F4CD44] transition-all duration-300 shrink-0 mt-1.5 flex items-center justify-center">
+                           <svg class="transition-all duration-300 w-3 h-3 opacity-0 group-has-[:checked]:opacity-100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                               <g id="SVGRepo_iconCarrier">
+                                   <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#F4CD44" stroke-width="2" stroke-linecap="round"
+                                       stroke-linejoin="round"></path>
+                               </g>
+                           </svg>
+                       </div>    
+                       <span>Нажимая кнопку, соглашаюсь на <a href="pers_dan.html" target="_blank" class="underline">обработку персональных данных</a> в целях информирования об услугах и содержании договора ООО «АКО».</span>
+                   </label>
+               </div>
+               <button id="sumbitModal" class="cursor-pointer w-[188px] h-8 flex items-center justify-center text-base bg-[#F4CD44] rounded-[5px]">Оставить заявку</button>
+           </div>
+       </form>   
+       <div id="success" class="hidden">
+           <div class="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[280px] z-10 flex flex-col text-base gap-4 bg-white text-black rounded-xl py-6 px-4 shadow-[0px_0px_13px_-7px_black]">
+               <img src="../Assets/Images/icons/info.svg" alt="" class="w-4">
+               <p>Ваше обращение успешно зарегистрировано! В ближайшее время мы с вами свяжемся.</p>
+           </div>
+       </div>
+       <div id="overlayModal" class="bg-black/30 fixed inset-0 z-[6] hidden"></div>   
+    </section>
+
+    <footer class="w-full bg-[#1F1D35] text-white relative mt-auto">
+        <div class="grid-container mt-[133px]">
+            <div class="flex flex-col gap-16 relative z-[3] pb-9">
+                <div class="flex flex-col gap-5 md:items-center">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-bold heading-3 md:text-center">Оперативная связь</p>
+                        <div class="flex max-md:flex-col md:items-center gap-6 md:gap-[60px]">
+                            <a href="tel:+74952408674" class="flex items-center gap-2">
+                                <img src="../Assets/Images/footer/tel.svg" alt="">
+                                <span class="text-base">+7 (495) 240-86-74</span>
+                            </a>
+                            <a href="mailto:info@akospb.su" class="flex items-center gap-2">
+                                <img src="../Assets/Images/footer/mail.svg" alt="">
+                                <span class="text-base">info@akospb.su</span>
+                            </a>
+                            <div class="flex items-center md:gap-[60px] gap-6">
+                                <a href="#" target="_blank">
+                                    <img src="../Assets/Images/footer/tg.svg" alt="">
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img src="../Assets/Images/footer/whatsapp.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-button-text="Отправить заявку" class="openMainModal cursor-pointer py-2.5 px-5 rounded-[5px] bg-[#F4CD44] text-[#15142D] text-base font-semibold w-fit">Отправить заявку</button>
+                </div>
+                <div class="flex flex-col gap-10">
+                    <div class="flex max-lg:flex-col md:justify-between gap-5 text-base">
+                        <a href="about.html">О компании</a>
+                        <div class="flex flex-col gap-5">
+                            <a href="service2.html">Ритейлу</a>
+                            <a href="service3.html">Ресторанам</a>
+                            <a href="#">Производствам и складам</a>
+                            <a href="#">Аудиоаналитика</a>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <a href="service1.html">Технология</a>
+                            <a href="service6.html">Система CheckClient</a>
+                            <a href="service5.html">Система CheckViewer</a>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <p class="max-lg:mt-4">
+                                © АКО 2011-2026 <br>
+                                ИНН 7806465854 <br>
+                                ОГРН 1117847500022
+                            </p>
+                            <div class="flex gap-px items-start max-lg:mt-4">
+                                <img src="../Assets/Images/footer/locate.svg" alt="">
+                                <p>
+                                    Санкт-Петербург, 194064 <br>
+                                    Тихорецкий проспект 17Б, оф.9
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex max-md:flex-col md:items-center md:justify-center gap-5 md:gap-7 text-base font-semibold">
+                        <button class="flex items-center justify-center border-2 border-[#F99D41] h-8 w-[200px] rounded-[5px]">
+                            Аудиоаналитика
+                        </button>
+                        <a href="service4.html" class="flex items-center justify-center border-2 border-[#F99D41] h-8 w-[200px] rounded-[5px]">
+                            Тестовый аудит
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../Assets/Images/footer/bg.png" alt="" class="absolute top-0 left-0 z-[2] w-full">
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU"></script>
+    <script>
+        ymaps.ready(init);
+        var myMapSpb;
+        var myMapMsk;
+        function init(){
+            myMapSpb = new ymaps.Map ("map-spb", {
+                center: [60.019738, 30.371231],
+                zoom: 15
+            });
+            myMapSpb.controls.add('zoomControl');
+            myPlacemarkSpb = new ymaps.Placemark([60.019738, 30.371231], {
+                hintContent: 'Тихорецкий проспект, 17Б',
+            }, {
+                iconImageHref: 'img/marker-yellow.svg',
+                iconImageSize: [23, 29],
+                iconImageOffset: [-11, -29],
+            });
+            myMapSpb.geoObjects.add(myPlacemarkSpb);
+            
+            myMapMsk = new ymaps.Map ("map-msk", {
+                center: [55.868653, 37.403420],
+                zoom: 15
+            });
+            myMapMsk.controls.add('zoomControl');
+            myPlacemarkMsk = new ymaps.Placemark([55.868653, 37.403420], {
+                hintContent: 'Бизнес-парк «Гринвуд», строение 19, 4 этаж',
+            }, {
+                iconImageHref: 'img/marker.svg',
+                iconImageSize: [23, 29],
+                iconImageOffset: [-11, -29],
+            });
+            myMapMsk.geoObjects.add(myPlacemarkMsk);
+        }
+    </script>
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(68339443, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/68339443" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180695838-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180695838-1');
+    </script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3214211.js"></script>
+    <!-- End of HubSpot Embed Code -->
+</body>
+</html>
