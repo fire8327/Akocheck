@@ -1943,6 +1943,16 @@
       width: calc(2/3 * 100%);
     }
   }
+  .lg\:w-2\/5 {
+    @media (width >= 64rem) {
+      width: calc(2/5 * 100%);
+    }
+  }
+  .lg\:w-3\/5 {
+    @media (width >= 64rem) {
+      width: calc(3/5 * 100%);
+    }
+  }
   .lg\:w-\[calc\(100\%-5px\)\] {
     @media (width >= 64rem) {
       width: calc(100% - 5px);
