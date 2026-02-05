@@ -63,6 +63,26 @@ $("#servicesToggler").click(() => {
   }
 })
 
+// close services menu on outside click
+$(document).on("click", (e) => {
+  const $target = $(e.target);
+  const isInsideServices = $target.closest("#servicesContainer").length > 0;
+
+  if (!isInsideServices) {
+    const $menu = $("#servicesMenu");
+    const $container = $("#servicesContainer");
+
+    // if menu is open, close it with the same animation logic
+    if ($menu.length && !$menu.hasClass("opacity-0")) {
+      $("#servicesToggler").find("img").removeClass("rotate-180");
+      $menu.addClass("opacity-0");
+      setTimeout(() => {
+        $container.addClass("overflow-hidden");
+      }, 200);
+    }
+  }
+});
+
 /* validate */
 const validate = new JustValidate('#mainModal', {
     validateBeforeSubmitting: true,
