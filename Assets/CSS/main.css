@@ -592,6 +592,9 @@
   .max-w-xl {
     max-width: var(--container-xl);
   }
+  .min-w-\[650px\] {
+    min-width: 650px;
+  }
   .min-w-\[850px\] {
     min-width: 850px;
   }
