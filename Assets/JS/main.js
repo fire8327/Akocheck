@@ -177,7 +177,7 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
     e.preventDefault();
 
     if(validate.isValid) {
-    $("#submitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
+    $("#sumbitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
     let message = `<b>Заявка с сайта.</b>\n`;
     message += `<b>Причина обращения: </b> ${this.userReason.value}\n`;
     message += `<b>Отправитель: </b> ${this.userName.value}\n`;
@@ -202,16 +202,112 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
             $("#success").hide(500)
             $("#overlayModal").hide(500)
         }, 3000);
-        $("#submitModal").removeClass("opacity-50 cursor-not-allowed").prop('disabled', false)
+        $("#sumbitModal").removeClass("opacity-50 cursor-not-allowed").prop('disabled', false)
     })
     .catch((err) => {
         console.warn(err);
+        $("#sumbitModal").removeClass("opacity-50 cursor-not-allowed").prop('disabled', false)
     })
     .finally(() => {
         console.log('Конец');
     })            
     }
 })
+
+/* validate mobile form (service3) */
+const mobileRequestForm = document.getElementById('mobileRequestForm');
+let mobileValidate;
+
+if (mobileRequestForm) {
+    mobileValidate = new JustValidate('#mobileRequestForm', {
+        validateBeforeSubmitting: true,
+    });
+
+    mobileValidate
+        .addField('#mobileUserName', [
+            {
+                rule: 'required',
+                errorMessage: 'Поле Имя обязательно к заполнению',
+            },
+            {
+                rule: 'customRegexp',
+                value: /^[А-Я\s\-]+$/i,
+                errorMessage: 'Поле Имя должно содержать только кириллицу, пробелы и дефисы',
+            },
+            {
+                rule: 'minLength',
+                value: 2,
+                errorMessage: 'Поле Имя должно иметь минимум 2 символа',
+            },
+        ])
+        .addField('#mobileUserPhone', [
+            {
+                rule: 'required',
+                errorMessage: 'Поле Телефон обязательно к заполнению',
+            },
+            {
+                rule: 'customRegexp',
+                value: /[0-9]/,
+                errorMessage: 'Поле Телефон должно содержать только цифры',
+            },
+            {
+                rule: 'minLength',
+                value: 11,
+                errorMessage: 'Поле Телефон должно иметь минимум 11 символов',
+            },
+        ])
+        .addField('#mobileUserEmail', [
+            {
+                rule: 'email',
+                errorMessage: 'Введите корректный email адрес',
+            },
+        ], {
+            optional: true,
+        });
+
+    mobileRequestForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!mobileValidate.isValid) return;
+
+        const $submitBtn = $('#mobileSubmitBtn');
+        $submitBtn.addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
+
+        let message = `<b>Заявка с сайта.</b>\n`;
+        message += `<b>Страница: </b> service3 — мобильная форма\n`;
+        message += `<b>Отправитель: </b> ${this.elements.name.value}\n`;
+        message += `<b>Номер телефона: </b> ${this.elements.phone.value}\n`;
+        if (this.elements.email.value) message += `<b>Email: </b> ${this.elements.email.value}\n`;
+        if (this.elements.city.value) message += `<b>Город: </b> ${this.elements.city.value}\n`;
+        if (this.elements.message.value) message += `<b>Причина обращения: </b> ${this.elements.message.value}\n`;
+
+        axios.post(url, {
+            chat_id: chat_id,
+            parse_mode: 'html',
+            text: message,
+        })
+        .then(() => {
+            this.elements.name.value = '';
+            this.elements.phone.value = '';
+            this.elements.email.value = '';
+            this.elements.city.value = '';
+            this.elements.message.value = '';
+            $('#overlayModal').show(500);
+            $('#success').show(500);
+            setTimeout(() => {
+                $('#success').hide(500);
+                $('#overlayModal').hide(500);
+            }, 3000);
+        })
+        .catch((err) => {
+            console.warn(err);
+        })
+        .finally(() => {
+            $submitBtn.removeClass('opacity-50 cursor-not-allowed').prop('disabled', false);
+            console.log('Конец');
+        });
+    });
+}
 
 
 /* violations accordion (service3 mobile) */

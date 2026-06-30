@@ -941,19 +941,19 @@
                         </div>
                     </div>
 
-                    <form id="mobileRequestForm" class="flex flex-col gap-5 p-6 rounded-[28px] bg-white text-[#15142D] shadow-[0_24px_70px_rgba(15,23,42,0.22)] lm-reveal" onsubmit="event.preventDefault()">
+                    <form id="mobileRequestForm" class="flex flex-col gap-5 p-6 rounded-[28px] bg-white text-[#15142D] shadow-[0_24px_70px_rgba(15,23,42,0.22)] lm-reveal">
                         <div>
                             <p class="heading-1 font-bold">Оставить заявку</p>
                             <p class="heading-3 mt-2 text-[#6b7280]">Для быстрого старта достаточно имени и телефона. Остальное можно уточнить позже.</p>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <label class="flex flex-col gap-1.5">
+                            <label class="flex flex-col gap-1.5 text-base">
                                 <span class="text-sm font-semibold text-[#6b7280]">Имя</span>
-                                <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                                <input type="text" name="name" id="mobileUserName" autocomplete="name" placeholder="Как к вам обращаться" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
                             </label>
-                            <label class="flex flex-col gap-1.5">
+                            <label class="flex flex-col gap-1.5 text-base">
                                 <span class="text-sm font-semibold text-[#6b7280]">Телефон</span>
-                                <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                                <input type="tel" name="phone" id="mobileUserPhone" autocomplete="tel" placeholder="+7 (___) ___-__-__" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
                             </label>
                             <details class="group">
                                 <summary class="list-none cursor-pointer text-sm font-semibold text-[#2448a8] [&::-webkit-details-marker]:hidden">
@@ -961,21 +961,21 @@
                                     <span class="group-not-open:hidden">Скрыть детали заявки</span>
                                 </summary>
                                 <div class="flex flex-col gap-3 mt-3">
-                                    <label class="flex flex-col gap-1.5">
+                                    <label class="flex flex-col gap-1.5 text-base">
                                         <span class="text-sm font-semibold text-[#6b7280]">E-mail</span>
-                                        <input type="email" name="email" autocomplete="email" placeholder="mail@company.ru" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                                        <input type="email" name="email" id="mobileUserEmail" autocomplete="email" placeholder="mail@company.ru" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
                                     </label>
-                                    <label class="flex flex-col gap-1.5">
+                                    <label class="flex flex-col gap-1.5 text-base">
                                         <span class="text-sm font-semibold text-[#6b7280]">Город</span>
-                                        <input type="text" name="city" placeholder="Город ресторана" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                                        <input type="text" name="city" id="mobileUserCity" placeholder="Город ресторана" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
                                     </label>
-                                    <label class="flex flex-col gap-1.5">
+                                    <label class="flex flex-col gap-1.5 text-base">
                                         <span class="text-sm font-semibold text-[#6b7280]">Причина обращения</span>
-                                        <textarea name="message" rows="3" placeholder="Например: хочу проверить кассу, кухню или качество сервиса" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af] resize-y min-h-[96px]"></textarea>
+                                        <textarea name="message" id="mobileUserMessage" rows="3" placeholder="Например: хочу проверить кассу, кухню или качество сервиса" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af] resize-y min-h-[96px]"></textarea>
                                     </label>
                                 </div>
                             </details>
-                            <button type="submit" class="cursor-pointer w-full px-5 py-3.5 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold text-base mt-1">Попробовать тестовый аудит</button>
+                            <button type="submit" id="mobileSubmitBtn" class="cursor-pointer w-full px-5 py-3.5 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold text-base mt-1">Попробовать тестовый аудит</button>
                             <p class="text-sm text-[#6b7280] leading-relaxed">Нажимая кнопку, вы соглашаетесь с <a href="pers_dan.html" target="_blank" class="underline text-[#F99D41]">обработкой персональных данных</a>.</p>
                         </div>
                     </form>
