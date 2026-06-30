@@ -82,3 +82,23 @@ body {
         width: 81%;
     }
 }
+
+/* Анимации появления */
+.lm-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1);
+}
+
+.lm-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lm-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
