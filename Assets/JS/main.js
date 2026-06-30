@@ -212,3 +212,16 @@ document.getElementById("mainModal").addEventListener("submit", function (e) {
     })            
     }
 })
+
+
+/* violations accordion (service3 mobile) */
+document.querySelectorAll('[data-violations-accordion]').forEach((group) => {
+    group.querySelectorAll('details').forEach((item) => {
+        item.addEventListener('toggle', () => {
+            if (!item.open) return;
+            group.querySelectorAll('details').forEach((other) => {
+                if (other !== item) other.removeAttribute('open');
+            });
+        });
+    });
+});

@@ -90,8 +90,8 @@
         </div>
     </header>
 
-    <main class="mb-10">
-        <div class="grid-container gap-y-16">
+    <main class="lg:mb-10">
+        <div class="grid-container gap-y-16 max-lg:hidden">
             <div class="col-span-full w-full text-white">
                 <div class="relative w-full overflow-hidden">
                     <img src="../Assets/Images/index/hero.jpg" alt="" class="absolute inset-0 touch-none w-full z-[0] max-md:aspect-[9/16] max-md:object-cover max-md:object-left">
@@ -487,6 +487,462 @@
                 </div>
             </div>
         </div>
+        <!-- Мобильная и планшетная версия (lg и ниже) -->
+        <div class="lg:hidden flex flex-col bg-[#f4f6fb] text-[#15142D]">
+
+            <!-- Hero -->
+            <section class="px-[15px] py-10 text-white bg-gradient-to-br from-[#15142D] via-[#1a1840] to-[#2448a8] overflow-hidden">
+                <div class="flex flex-col gap-4">
+                    <span class="inline-flex items-center gap-2 w-fit px-3 py-2 rounded-full bg-white/10 border border-white/15 text-sm font-semibold text-[#F4CD44]">
+                        <span class="w-2 h-2 rounded-full bg-[#F4CD44]"></span>
+                        Видео-аудит ресторанов
+                    </span>
+                    <h1 class="text-[clamp(2rem,9vw,2.75rem)] font-semibold leading-tight">
+                        Узнайте, что происходит в вашем ресторане, <span class="text-[#F4CD44]">когда вас нет</span>
+                    </h1>
+                    <p class="text-base text-white/85 leading-relaxed">Аналитики АКО смотрят ваши камеры и присылают фото нарушений с комментариями — в тот же день.</p>
+                    <div class="flex flex-col gap-2.5 mt-2">
+                        <button data-button-text="Да, хочу тестовый аудит" class="openMainModal cursor-pointer w-full px-5 py-3.5 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold text-base">Попробовать тестовый аудит</button>
+                        <a href="#mobile-pricing" class="w-full px-5 py-3.5 rounded-2xl border border-white/30 bg-white/10 text-white font-semibold text-base text-center">Узнать стоимость</a>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-3">
+                        <span class="flex items-center gap-2 w-full px-3 py-2.5 rounded-full bg-white/10 border border-white/15 text-sm text-white/90">
+                            <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-200 text-xs flex items-center justify-center">✓</span>
+                            Первые результаты через 2 дня
+                        </span>
+                        <span class="flex items-center gap-2 w-full px-3 py-2.5 rounded-full bg-white/10 border border-white/15 text-sm text-white/90">
+                            <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-200 text-xs flex items-center justify-center">✓</span>
+                            Контроль без вашего участия
+                        </span>
+                        <span class="flex items-center gap-2 w-full px-3 py-2.5 rounded-full bg-white/10 border border-white/15 text-sm text-white/90">
+                            <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-200 text-xs flex items-center justify-center">✓</span>
+                            Скидка 5% при заявке с сайта
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Доверие -->
+            <section class="px-[15px] py-12 bg-white">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Доверие</span>
+                        <p class="heading-1 font-medium mt-3">Нам доверяют</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="p-5 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <p class="heading-3 font-medium mb-4">Клиенты</p>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="min-h-[72px] p-3 rounded-2xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/cinn.png" alt="Cinnabon" class="max-h-8 max-w-full object-contain"></div>
+                                <div class="min-h-[72px] p-3 rounded-2xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/frank.png" alt="Frank" class="max-h-8 max-w-full object-contain"></div>
+                                <div class="min-h-[72px] p-3 rounded-2xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/kfc.png" alt="KFC" class="max-h-8 max-w-full object-contain"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <p class="heading-3 font-medium mb-3">Технологические партнёры</p>
+                            <div class="grid grid-cols-3 gap-1.5">
+                                <div class="min-h-[58px] p-2 rounded-xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/iiko.png" alt="iiko" class="max-h-6 max-w-[82px] object-contain"></div>
+                                <div class="min-h-[58px] p-2 rounded-xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/csi.png" alt="CSI" class="max-h-6 max-w-[82px] object-contain"></div>
+                                <div class="min-h-[58px] p-2 rounded-xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/r_keeper.png" alt="r_keeper" class="max-h-6 max-w-[82px] object-contain"></div>
+                                <div class="min-h-[58px] p-2 rounded-xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/dssl.png" alt="DSSL" class="max-h-6 max-w-[82px] object-contain"></div>
+                                <div class="min-h-[58px] p-2 rounded-xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/ivid.png" alt="Ivideon" class="max-h-6 max-w-[82px] object-contain"></div>
+                                <div class="min-h-[58px] p-2 rounded-xl bg-[#f8fafc] border border-black/5 flex items-center justify-center"><img src="../Assets/Images/index/hik.png" alt="Hikvision" class="max-h-6 max-w-[82px] object-contain"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Нарушения (аккордеон) -->
+            <section class="px-[15px] py-12 bg-[#f4f6fb]">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Контроль нарушений</span>
+                        <p class="heading-1 font-medium mt-3">АКО показывает, где ресторан теряет деньги, сервис и безопасность</p>
+                        <p class="heading-4 mt-3 text-[#6b7280]">Ниже — основные зоны контроля и виды нарушений, которые сложно заметить без постоянного контроля.</p>
+                    </div>
+                    <div class="flex flex-col gap-4" data-violations-accordion>
+                        <details class="group rounded-[28px] bg-[#252b4b] border border-white/10 open:border-[#F4CD44]/25 open:shadow-lg" open>
+                            <summary class="flex items-center gap-3.5 p-5 list-none cursor-pointer [&::-webkit-details-marker]:hidden">
+                                <span class="w-14 h-14 shrink-0 rounded-full bg-[#F4CD44] flex items-center justify-center text-2xl">💰</span>
+                                <span class="flex-1 min-w-0">
+                                    <p class="text-white font-medium text-lg leading-tight">Хищения и злоупотребления официантов</p>
+                                </span>
+                                <span class="text-[#F4CD44] text-3xl leading-none transition-transform group-open:rotate-180">⌄</span>
+                            </summary>
+                            <div class="px-8 pb-6">
+                                <ul class="flex flex-col border-t border-white/10 pt-2 list-disc list-inside marker:text-[#F4CD44] heading-4 text-white/80">
+                                    <li class="py-2.5 border-b border-white/[0.06]">недостачи и воровство наличных</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">отмены и корректировки чеков</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">пробитие мимо кассы</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">манипуляции со скидками</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">вынос продукции и алкоголя</li>
+                                    <li class="py-2.5">обслуживание «своих» без чека</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="group rounded-[28px] bg-[#252b4b] border border-white/10 open:border-[#F4CD44]/25 open:shadow-lg">
+                            <summary class="flex items-center gap-3.5 p-5 list-none cursor-pointer [&::-webkit-details-marker]:hidden">
+                                <span class="w-14 h-14 shrink-0 rounded-full bg-[#F4CD44] flex items-center justify-center text-2xl">🏅</span>
+                                <span class="flex-1 min-w-0">
+                                    <p class="text-white font-medium text-lg leading-tight">Качество обслуживания</p>
+                                </span>
+                                <span class="text-[#F4CD44] text-3xl leading-none transition-transform group-open:rotate-180">⌄</span>
+                            </summary>
+                            <div class="px-8 pb-6">
+                                <ul class="flex flex-col border-t border-white/10 pt-2 list-disc list-inside marker:text-[#F4CD44] heading-4 text-white/80">
+                                    <li class="py-2.5 border-b border-white/[0.06]">долгое ожидание официанта</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">ошибки в заказах</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">невнимательность и грубость</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">отсутствие контроля зала</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">несоблюдение стандартов обслуживания</li>
+                                    <li class="py-2.5">внешний вид персонала</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="group rounded-[28px] bg-[#252b4b] border border-white/10 open:border-[#F4CD44]/25 open:shadow-lg">
+                            <summary class="flex items-center gap-3.5 p-5 list-none cursor-pointer [&::-webkit-details-marker]:hidden">
+                                <span class="w-14 h-14 shrink-0 rounded-full bg-[#F4CD44] flex items-center justify-center text-2xl">🍴</span>
+                                <span class="flex-1 min-w-0">
+                                    <p class="text-white font-medium text-lg leading-tight">Открытая кухня и линия раздачи</p>
+                                </span>
+                                <span class="text-[#F4CD44] text-3xl leading-none transition-transform group-open:rotate-180">⌄</span>
+                            </summary>
+                            <div class="px-8 pb-6">
+                                <ul class="flex flex-col border-t border-white/10 pt-2 list-disc list-inside marker:text-[#F4CD44] heading-4 text-white/80">
+                                    <li class="py-2.5 border-b border-white/[0.06]">работа без перчаток и головного убора</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">нарушение технологии приготовления</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">использование телефона на кухне</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">нарушение температурного режима</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">перекрёстное загрязнение</li>
+                                    <li class="py-2.5">использование просроченных продуктов</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="group rounded-[28px] bg-[#252b4b] border border-white/10 open:border-[#F4CD44]/25 open:shadow-lg">
+                            <summary class="flex items-center gap-3.5 p-5 list-none cursor-pointer [&::-webkit-details-marker]:hidden">
+                                <span class="w-14 h-14 shrink-0 rounded-full bg-[#F4CD44] flex items-center justify-center text-2xl">🏬</span>
+                                <span class="flex-1 min-w-0">
+                                    <p class="text-white font-medium text-lg leading-tight">Внутреннее и подсобное помещение</p>
+                                </span>
+                                <span class="text-[#F4CD44] text-3xl leading-none transition-transform group-open:rotate-180">⌄</span>
+                            </summary>
+                            <div class="px-8 pb-6">
+                                <ul class="flex flex-col border-t border-white/10 pt-2 list-disc list-inside marker:text-[#F4CD44] heading-4 text-white/80">
+                                    <li class="py-2.5 border-b border-white/[0.06]">нарушение хранения продуктов</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">отсутствие маркировки</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">загрязнение инвентаря и тары</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">несоблюдение товарного соседства</li>
+                                    <li class="py-2.5 border-b border-white/[0.06]">несвоевременная уборка</li>
+                                    <li class="py-2.5">доступ посторонних лиц</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="p-5 rounded-3xl bg-[#fff5bf] border border-[#F4CD44]/60 text-[#514000] heading-4 font-medium leading-relaxed">
+                        Главная ценность тестового аудита — вы видите не абстрактные риски, а реальные эпизоды из своего ресторана. После этого решение о регулярном контроле становится очевидным.
+                    </div>
+                    <div class="flex flex-col gap-4 p-5 rounded-3xl border border-[#F4CD44]/45 bg-white shadow-[0_14px_36px_rgba(14,23,53,0.06)]">
+                        <div>
+                            <p class="heading-3 font-semibold">Хотите увидеть реальные эпизоды из своего ресторана?</p>
+                            <p class="heading-4 mt-2 text-[#6b7280]">Запустим тестовый аудит и покажем первые нарушения уже через 2 дня.</p>
+                        </div>
+                        <button data-button-text="Да, хочу тестовый аудит" class="openMainModal cursor-pointer w-full px-5 py-3 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold heading-4">Попробовать тестовый аудит</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Как это работает -->
+            <section class="px-[15px] py-12 bg-white">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Как это работает</span>
+                        <p class="heading-1 font-medium mt-3">Без найма оператора, без лишней нагрузки на управляющего</p>
+                        <p class="heading-4 mt-3 text-[#6b7280]">Вы подключаете камеры, аналитики АКО смотрят записи по согласованным зонам, фиксируют нарушения и передают доказательства ответственным людям.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#eaf1ff] text-[#2448a8] font-bold mb-5">01</span>
+                            <p class="heading-3 font-medium">Определяем зоны контроля</p>
+                            <p class="heading-4 mt-3 text-[#6b7280] leading-relaxed">Касса, зал, кухня, раздача, склад и служебные помещения — в зависимости от задач ресторана.</p>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#eaf1ff] text-[#2448a8] font-bold mb-5">02</span>
+                            <p class="heading-3 font-medium">Аналитик просматривает видео</p>
+                            <p class="heading-4 mt-3 text-[#6b7280] leading-relaxed">Проверяются записи с камер за нужный период и выбираются только значимые эпизоды.</p>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#eaf1ff] text-[#2448a8] font-bold mb-5">03</span>
+                            <p class="heading-3 font-medium">Фиксируем нарушение</p>
+                            <p class="heading-4 mt-3 text-[#6b7280] leading-relaxed">К каждому случаю добавляются время, место, фото или видеофрагмент и комментарий.</p>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#eaf1ff] text-[#2448a8] font-bold mb-5">04</span>
+                            <p class="heading-3 font-medium">Вы получаете отчёт</p>
+                            <p class="heading-4 mt-3 text-[#6b7280] leading-relaxed">Материалы приходят в личный кабинет, отчёт или согласованный канал связи.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Уведомление -->
+            <section class="px-[15px] py-12 bg-[#f4f6fb]">
+                <div class="flex flex-col gap-4">
+                    <div class="p-5 rounded-[26px] bg-gradient-to-br from-[#15142D] to-[#2448a8] text-white flex items-center justify-center">
+                        <div class="w-full max-w-[360px] rounded-[34px] p-4 bg-[#111827] border-[7px] border-white/15 shadow-2xl">
+                            <div class="w-[86px] h-[7px] rounded-full bg-white/20 mx-auto mb-4"></div>
+                            <div class="rounded-3xl bg-white text-[#15142D] p-4 mb-3.5 shadow-lg">
+                                <div class="flex justify-between gap-3 mb-3 text-xs font-bold uppercase tracking-wide text-[#7b8495]">
+                                    <span>АКО · нарушение</span><span>сегодня</span>
+                                </div>
+                                <div class="aspect-[16/10] rounded-2xl mb-3.5 bg-[url('../Assets/Images/index/hero.jpg')] bg-cover bg-center relative">
+                                    <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 text-[#2448a8] flex items-center justify-center text-sm shadow-lg">▶</span>
+                                </div>
+                                <p class="font-semibold text-base leading-tight mb-2">Кассовая зона: возможный пропуск позиции</p>
+                                <p class="text-sm text-[#6b7280] leading-relaxed">14:27, камера 03. Рекомендуем сверить чек №1842 и комментарий официанта по заказу.</p>
+                            </div>
+                            <div class="rounded-3xl bg-white text-[#15142D] p-4 opacity-90 shadow-lg">
+                                <div class="flex justify-between gap-3 mb-3 text-xs font-bold uppercase tracking-wide text-[#7b8495]">
+                                    <span>Комментарий аналитика</span><span>14:34</span>
+                                </div>
+                                <p class="text-sm text-[#6b7280] leading-relaxed">Фрагмент добавлен в личный кабинет. Нарушение отмечено как критическое.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)] flex flex-col gap-6">
+                        <div>
+                            <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Быстрая реакция</span>
+                            <p class="heading-1 font-medium mt-3">Нарушение зафиксировано — вы узнаете об этом в тот же день</p>
+                            <p class="heading-4 mt-3 text-[#6b7280] leading-relaxed">АКО не оставляет вас с голым видеонаблюдением. Управляющий получает факт, доказательство и рекомендацию.</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div class="p-4 rounded-2xl bg-[#f8fafc] border border-black/10 heading-4 font-medium">Фото или видеофрагмент</div>
+                            <div class="p-4 rounded-2xl bg-[#f8fafc] border border-black/10 heading-4 font-medium">Дата, время и зона</div>
+                            <div class="p-4 rounded-2xl bg-[#f8fafc] border border-black/10 heading-4 font-medium">Комментарий аналитика</div>
+                            <div class="p-4 rounded-2xl bg-[#f8fafc] border border-black/10 heading-4 font-medium">Рекомендация, что проверить</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Статистика -->
+            <section class="px-[15px] py-12 bg-white">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Экономика</span>
+                        <p class="heading-1 font-medium mt-3">Что показывает статистика АКО за 19 лет</p>
+                        <p class="heading-4 mt-3 text-[#6b7280]">После тестового аудита можно рассчитать похожую экономику для вашего ресторана.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#2448a8] to-[#15142D] text-white">
+                            <p class="text-[clamp(2rem,12vw,3rem)] font-bold leading-none">85 000 ₽</p>
+                            <p class="heading-4 mt-4 text-white/85">пример прямых потерь в месяц на один ресторан</p>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <p class="text-[clamp(2rem,12vw,3rem)] font-bold leading-none text-[#2448a8]">3%</p>
+                            <p class="heading-4 mt-4 text-[#6b7280]">потери от выручки до внедрения видео-аудита</p>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <p class="text-[clamp(2rem,12vw,3rem)] font-bold leading-none text-[#2448a8]">&lt;2%</p>
+                            <p class="heading-4 mt-4 text-[#6b7280]">потери после внедрения регулярного контроля</p>
+                        </div>
+                        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#F4CD44] to-[#F99D41]">
+                            <p class="text-[clamp(1.5rem,8vw,2.25rem)] font-bold leading-tight text-[#4b3600]">3,0 → 3,15 млн ₽</p>
+                            <p class="heading-4 mt-4 text-[#4b3600]/90">пример роста выручки после внедрения контроля</p>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)]">
+                            <p class="text-[clamp(2rem,12vw,3rem)] font-bold leading-none text-[#2448a8]">до 80%</p>
+                            <p class="heading-4 mt-4 text-[#6b7280]">снижение штрафов и претензий</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Сравнение -->
+            <section class="px-[15px] py-12 bg-[#f4f6fb]">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Вместо найма</span>
+                        <p class="heading-1 font-medium mt-3">Штатный видеооператор или АКО?</p>
+                        <p class="heading-4 mt-3 text-[#6b7280]">АКО закрывает просмотр видео, фиксацию нарушений и подготовку комментариев без найма отдельного сотрудника.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)] flex flex-col gap-6">
+                            <div>
+                                <span class="inline-flex px-3 py-1.5 rounded-full bg-[#eaf1ff] text-[#2448a8] text-xs font-bold uppercase">Свой сотрудник</span>
+                                <p class="heading-2 font-medium mt-4">Штатный видеооператор</p>
+                                <p class="heading-4 mt-2 text-[#6b7280]">Зарплата, налоги, рабочее место, обучение, замены на отпуск.</p>
+                            </div>
+                            <ul class="flex flex-col gap-2 list-disc list-inside marker:text-[#2448a8] heading-4 text-[#4b5565]">
+                                <li>нужно нанять и обучить человека</li>
+                                <li>нужны рабочее место, оборудование и ПО</li>
+                                <li>есть отпуска, больничные и текучка</li>
+                                <li>качество просмотра всё равно нужно контролировать</li>
+                            </ul>
+                            <div>
+                                <p class="text-3xl font-bold">от 129 000 ₽</p>
+                                <p class="heading-4 text-[#6b7280] mt-1">в месяц с учётом расходов</p>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#15142D] to-[#2448a8] text-white flex flex-col gap-6">
+                            <div>
+                                <span class="inline-flex px-3 py-1.5 rounded-full bg-[#fff3bf] text-[#6f4a00] text-xs font-bold uppercase">АКО</span>
+                                <p class="heading-2 font-medium mt-4">Видео-аудит как сервис</p>
+                                <p class="heading-4 mt-2 text-white/85">Аналитики, отчёты и личный кабинет уже входят в тариф.</p>
+                            </div>
+                            <ul class="flex flex-col gap-2 list-disc list-inside marker:text-[#F4CD44] heading-4 text-white/85">
+                                <li>не нужно нанимать отдельного сотрудника</li>
+                                <li>аналитики и отчёты включены в тариф</li>
+                                <li>каждый эпизод приходит с доказательством</li>
+                                <li>можно начать с тестового аудита</li>
+                            </ul>
+                            <div>
+                                <p class="text-3xl font-bold text-[#F4CD44]">от 19 500 ₽</p>
+                                <p class="heading-4 text-white/70 mt-1">в месяц · экономия до 85%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-button-text="Получите точный расчёт для своих задач" class="openMainModal cursor-pointer w-full px-5 py-3 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold heading-3">Получите точный расчёт для своих задач</button>
+                </div>
+            </section>
+
+            <!-- Стоимость -->
+            <section id="mobile-pricing" class="px-[15px] py-12 bg-white">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F99D41] text-xs font-bold uppercase tracking-wide">Стоимость</span>
+                        <p class="heading-1 font-medium mt-3">Выберите частоту отчётов под интенсивность контроля</p>
+                        <p class="heading-4 mt-3 text-[#6b7280]">Тарифы для одного ресторана: до 4 касс и до 8 видеокамер.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)] flex flex-col gap-4">
+                            <span class="inline-flex w-fit px-3 py-1.5 rounded-full bg-[#eaf1ff] text-[#2448a8] text-xs font-bold uppercase">1 раз в месяц</span>
+                            <p class="heading-2 font-medium">Базовый контроль</p>
+                            <ul class="flex flex-col gap-2 list-disc list-inside marker:text-[#2448a8] heading-4 text-[#4b5565]">
+                                <li>1 ресторан · до 4 касс · до 8 видеокамер</li>
+                                <li>отчёт 1 раз в месяц</li>
+                            </ul>
+                            <p class="text-3xl font-bold mt-2">19 500 ₽ <span class="heading-4 font-normal text-[#6b7280]">/ мес</span></p>
+                            <button data-button-text="Оставить заявку" class="openMainModal cursor-pointer w-full px-5 py-3 rounded-2xl bg-[#15142D] text-[#F4CD44] font-semibold heading-4">Оставить заявку</button>
+                        </div>
+                        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#2448a8] to-[#15142D] text-white flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex px-3 py-1.5 rounded-full bg-[#F4CD44] text-[#15142D] text-xs font-bold uppercase">Популярный</span>
+                                <span class="inline-flex px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold uppercase">2 раза в месяц</span>
+                            </div>
+                            <p class="heading-2 font-medium">Оптимальный аудит</p>
+                            <ul class="flex flex-col gap-2 list-disc list-inside marker:text-[#F4CD44] heading-4 text-white/85">
+                                <li>1 ресторан · до 4 касс · до 8 видеокамер</li>
+                                <li>отчёт 2 раза в месяц</li>
+                            </ul>
+                            <p class="text-3xl font-bold text-[#F4CD44] mt-2">29 500 ₽ <span class="heading-4 font-normal text-white/70">/ мес</span></p>
+                            <button data-button-text="Да, хочу тестовый аудит" class="openMainModal cursor-pointer w-full px-5 py-3 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold heading-4">Попробовать аудит</button>
+                        </div>
+                        <div class="p-6 rounded-3xl border border-black/10 bg-white shadow-[0_14px_36px_rgba(17,23,43,0.07)] flex flex-col gap-4">
+                            <span class="inline-flex w-fit px-3 py-1.5 rounded-full bg-[#eaf1ff] text-[#2448a8] text-xs font-bold uppercase">4 раза в месяц</span>
+                            <p class="heading-2 font-medium">Частый контроль</p>
+                            <ul class="flex flex-col gap-2 list-disc list-inside marker:text-[#2448a8] heading-4 text-[#4b5565]">
+                                <li>1 ресторан · до 4 касс · до 8 видеокамер</li>
+                                <li>отчёт 4 раза в месяц</li>
+                            </ul>
+                            <p class="text-3xl font-bold mt-2">39 500 ₽ <span class="heading-4 font-normal text-[#6b7280]">/ мес</span></p>
+                            <button data-button-text="Оставить заявку" class="openMainModal cursor-pointer w-full px-5 py-3 rounded-2xl bg-[#15142D] text-[#F4CD44] font-semibold heading-4">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Отзывы -->
+            <section class="px-[15px] py-12 bg-gradient-to-br from-[#15142D] to-[#1f2752] text-white">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/15 text-[#F4CD44] text-xs font-bold uppercase tracking-wide">Отзывы</span>
+                        <p class="heading-1 font-medium mt-3 text-white">Что говорят рестораторы</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <article class="p-6 rounded-[28px] bg-white/10 border border-white/12 flex flex-col gap-5">
+                            <p class="text-[#F4CD44] text-xl tracking-widest font-bold">★ ★ ★ ★ ★</p>
+                            <p class="text-base leading-relaxed text-white/90">«Спасибо АКО за внимание к деталям. За первый месяц нашли несколько регулярных схем, из-за которых теряли около 70 тысяч рублей.»</p>
+                            <div class="flex items-center gap-3.5">
+                                <span class="w-14 h-14 rounded-full bg-[#F4CD44] text-[#15142D] font-bold text-2xl flex items-center justify-center shrink-0">А</span>
+                                <div><p class="font-semibold text-lg">Анна М.</p><p class="text-sm text-white/60">владелица ресторана · Якутск</p></div>
+                            </div>
+                        </article>
+                        <article class="p-6 rounded-[28px] bg-white/10 border border-white/12 flex flex-col gap-5">
+                            <p class="text-[#F4CD44] text-xl tracking-widest font-bold">★ ★ ★ ★ ★</p>
+                            <p class="text-base leading-relaxed text-white/90">«По сумме это выходило около 50 тысяч рублей в месяц. АКО помог увидеть проблему детально. Смело могу рекомендовать 🤝»</p>
+                            <div class="flex items-center gap-3.5">
+                                <span class="w-14 h-14 rounded-full bg-[#F4CD44] text-[#15142D] font-bold text-2xl flex items-center justify-center shrink-0">К</span>
+                                <div><p class="font-semibold text-lg">Кирилл С.</p><p class="text-sm text-white/60">управляющий кофейни · Новосибирск</p></div>
+                            </div>
+                        </article>
+                        <article class="p-6 rounded-[28px] bg-white/10 border border-white/12 flex flex-col gap-5">
+                            <p class="text-[#F4CD44] text-xl tracking-widest font-bold">★ ★ ★ ★ ★</p>
+                            <p class="text-base leading-relaxed text-white/90">«Отчёты АКО помогли быстро разобрать ситуации с командой и настроить контроль без найма отдельного оператора.»</p>
+                            <div class="flex items-center gap-3.5">
+                                <span class="w-14 h-14 rounded-full bg-[#F4CD44] text-[#15142D] font-bold text-2xl flex items-center justify-center shrink-0">Д</span>
+                                <div><p class="font-semibold text-lg">Дмитрий К.</p><p class="text-sm text-white/60">управляющий сетью кафе · Казань</p></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Финальный CTA + форма -->
+            <section id="mobile-request" class="px-[15px] py-12 bg-gradient-to-br from-[#15142D] via-[#2448a8] to-[#2f66e6] text-white">
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-6 p-7 rounded-[30px] bg-white/10 border border-white/15">
+                        <div>
+                            <span class="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-[#F4CD44]/20 text-[#F4CD44] text-xs font-bold uppercase tracking-wide">Тестовый аудит</span>
+                            <p class="text-[clamp(1.75rem,8vw,2.5rem)] font-semibold leading-tight mt-3">Проверьте свой ресторан на реальных эпизодах</p>
+                            <p class="heading-4 mt-3 text-white/80 leading-relaxed">Оставьте заявку — и через первые результаты вы увидите, где ресторан теряет деньги, сервис или безопасность.</p>
+                        </div>
+                        <div class="flex flex-col gap-2 text-sm text-white/90">
+                            <span class="flex items-center gap-2 px-3 py-2.5 rounded-full bg-white/10 border border-white/15"><span class="w-2 h-2 rounded-full bg-[#F4CD44]"></span>7 дней тестового аудита</span>
+                            <span class="flex items-center gap-2 px-3 py-2.5 rounded-full bg-white/10 border border-white/15"><span class="w-2 h-2 rounded-full bg-[#F4CD44]"></span>первые результаты через 2 дня</span>
+                            <span class="flex items-center gap-2 px-3 py-2.5 rounded-full bg-white/10 border border-white/15"><span class="w-2 h-2 rounded-full bg-[#F4CD44]"></span>скидка 5% при заявке с сайта</span>
+                        </div>
+                    </div>
+
+                    <form id="mobileRequestForm" class="flex flex-col gap-5 p-6 rounded-[28px] bg-white text-[#15142D] shadow-[0_24px_70px_rgba(15,23,42,0.22)]" onsubmit="event.preventDefault()">
+                        <div>
+                            <p class="heading-2 font-semibold">Оставить заявку</p>
+                            <p class="heading-4 mt-2 text-[#6b7280]">Для быстрого старта достаточно имени и телефона. Остальное можно уточнить позже.</p>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <label class="flex flex-col gap-1.5">
+                                <span class="text-sm font-semibold text-[#6b7280]">Имя</span>
+                                <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                            </label>
+                            <label class="flex flex-col gap-1.5">
+                                <span class="text-sm font-semibold text-[#6b7280]">Телефон</span>
+                                <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                            </label>
+                            <details class="group">
+                                <summary class="list-none cursor-pointer text-sm font-semibold text-[#2448a8] [&::-webkit-details-marker]:hidden">Добавить детали заявки</summary>
+                                <div class="flex flex-col gap-3 mt-3 pt-3 border-t border-black/10">
+                                    <label class="flex flex-col gap-1.5">
+                                        <span class="text-sm font-semibold text-[#6b7280]">E-mail</span>
+                                        <input type="email" name="email" autocomplete="email" placeholder="mail@company.ru" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                                    </label>
+                                    <label class="flex flex-col gap-1.5">
+                                        <span class="text-sm font-semibold text-[#6b7280]">Город</span>
+                                        <input type="text" name="city" placeholder="Город ресторана" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af]">
+                                    </label>
+                                    <label class="flex flex-col gap-1.5">
+                                        <span class="text-sm font-semibold text-[#6b7280]">Причина обращения</span>
+                                        <textarea name="message" rows="3" placeholder="Например: хочу проверить кассу, кухню или качество сервиса" class="px-4 py-2.5 rounded-xl border border-[#F4CD44] w-full text-base text-[#15142D] placeholder:text-[#9ca3af] resize-y min-h-[96px]"></textarea>
+                                    </label>
+                                </div>
+                            </details>
+                            <button type="submit" class="cursor-pointer w-full px-5 py-3.5 rounded-2xl bg-[#F4CD44] text-[#15142D] font-semibold text-base mt-1">Попробовать тестовый аудит</button>
+                            <p class="text-sm text-[#6b7280] leading-relaxed">Нажимая кнопку, вы соглашаетесь с <a href="pers_dan.html" target="_blank" class="underline text-[#F99D41]">обработкой персональных данных</a>.</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <section>
