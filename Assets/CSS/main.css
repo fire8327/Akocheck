@@ -1540,6 +1540,9 @@
   .text-\[14px\] {
     font-size: 14px;
   }
+  .text-\[42px\] {
+    font-size: 42px;
+  }
   .text-\[clamp\(1\.5rem\,8vw\,2\.25rem\)\] {
     font-size: clamp(1.5rem, 8vw, 2.25rem);
   }
