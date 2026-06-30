@@ -228,6 +228,21 @@ document.querySelectorAll('[data-violations-accordion]').forEach((group) => {
 
 (function () {
   let reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      let hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      let target = document.querySelector(hash);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+})();
+
+(function () {
+  let reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let revealItems = document.querySelectorAll('.lm-reveal');
   
   if (reduceMotion || !('IntersectionObserver' in window)) {
