@@ -1113,6 +1113,9 @@
   .bg-\[\#E0E0E0\] {
     background-color: #E0E0E0;
   }
+  .bg-\[\#F4C4D44\]\/50 {
+    background-color: color-mix(in oklab, #F4C4D44 50%, transparent);
+  }
   .bg-\[\#F4CD44\] {
     background-color: #F4CD44;
   }
@@ -1122,6 +1125,9 @@
   .bg-\[\#F4CD44\]\/20 {
     background-color: color-mix(in oklab, #F4CD44 20%, transparent);
   }
+  .bg-\[\#F4CD44\]\/50 {
+    background-color: color-mix(in oklab, #F4CD44 50%, transparent);
+  }
   .bg-\[\#F7A541\] {
     background-color: #F7A541;
   }
@@ -1130,6 +1136,9 @@
   }
   .bg-\[\#FFF0BC\] {
     background-color: #FFF0BC;
+  }
+  .bg-\[\#\] {
+    background-color: #;
   }
   .bg-\[\#eaf1ff\] {
     background-color: #eaf1ff;
