@@ -987,6 +987,9 @@
   .border-\[\#F4CD44\] {
     border-color: #F4CD44;
   }
+  .border-\[\#F4CD44\]\/15 {
+    border-color: color-mix(in oklab, #F4CD44 15%, transparent);
+  }
   .border-\[\#F4CD44\]\/30 {
     border-color: color-mix(in oklab, #F4CD44 30%, transparent);
   }
@@ -1124,6 +1127,9 @@
   }
   .bg-\[\#F4CD44\] {
     background-color: #F4CD44;
+  }
+  .bg-\[\#F4CD44\]\/10 {
+    background-color: color-mix(in oklab, #F4CD44 10%, transparent);
   }
   .bg-\[\#F4CD44\]\/15 {
     background-color: color-mix(in oklab, #F4CD44 15%, transparent);
