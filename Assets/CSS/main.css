@@ -1495,6 +1495,9 @@
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
+  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
   }
@@ -1818,9 +1821,24 @@
   .\[background\:linear-gradient\(90deg\,\#F89E41_0\%\,\#F4CD44_100\%\)\] {
     background: linear-gradient(90deg,#F89E41 0%,#F4CD44 100%);
   }
+  .group-not-open\:hidden {
+    &:is(:where(.group):not(*:is([open], :popover-open, :open)) *) {
+      display: none;
+    }
+  }
+  .group-open\:hidden {
+    &:is(:where(.group):is([open], :popover-open, :open) *) {
+      display: none;
+    }
+  }
   .group-open\:rotate-180 {
     &:is(:where(.group):is([open], :popover-open, :open) *) {
       rotate: 180deg;
+    }
+  }
+  .group-default\:hidden {
+    &:is(:where(.group):default *) {
+      display: none;
     }
   }
   .group-has-\[\:checked\]\:border-\[\#F4CD44\] {
