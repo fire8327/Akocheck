@@ -2092,6 +2092,11 @@
       padding-block: calc(var(--spacing) * 6);
     }
   }
+  .max-lg\:pb-20 {
+    @media (width < 64rem) {
+      padding-bottom: calc(var(--spacing) * 20);
+    }
+  }
   .max-md\:left-1\/2 {
     @media (width < 48rem) {
       left: calc(1/2 * 100%);
