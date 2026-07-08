@@ -4,14 +4,20 @@
     const acceptBtn = document.getElementById('cookieAccept');
     const storageKey = 'akocheck_cookies_accepted';
     if (banner) {
-        banner.style.display = localStorage.getItem(storageKey) ? 'none' : 'block';
+        if (localStorage.getItem(storageKey)) {
+            banner.classList.add('hidden');
+        } else {
+            banner.classList.remove('hidden', 'translate-y-full');
+        }
     }
     if (acceptBtn) {
         acceptBtn.addEventListener('click', function () {
             localStorage.setItem(storageKey, 'true');
             if (banner) {
-                banner.style.transform = 'translateY(100%)';
-                setTimeout(function () { banner.style.display = 'none'; }, 500);
+                banner.classList.add('translate-y-full');
+                setTimeout(function () {
+                    banner.classList.add('hidden');
+                }, 500);
             }
         });
     }

@@ -1032,7 +1032,7 @@
        <div id="overlayModal" class="bg-black/30 fixed inset-0 z-[6] hidden"></div>   
     </section>
 
-    <footer class="w-full bg-[#1F1D35] text-white relative mt-auto">
+    <footer class="w-full bg-[#1F1D35] text-white relative mt-auto pb-20">
         <div class="grid-container mt-[133px]">
             <div class="flex flex-col gap-16 relative z-[3] pb-9">
                 <div class="flex flex-col gap-5 md:items-center">
@@ -1089,6 +1089,9 @@
                         </div>
                     </div>
                     <div class="flex max-md:flex-col md:items-center md:justify-center gap-5 md:gap-7 text-base font-semibold">
+                        <a href="https://akocheck.ru/cookies.html" class="lg:hidden border-b border-[#F99D41] w-fit">
+                            Соглашение о cookie
+                        </a>
                         <button class="flex items-center justify-center border-2 border-[#F99D41] h-8 w-[200px] rounded-[5px]">
                             Аудиоаналитика
                         </button>
@@ -1103,7 +1106,7 @@
     </footer>
 
     <!-- Плашка согласия на cookies -->
-    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 z-[8] w-full bg-[#15142D] border-t border-[#F7A541] px-4 py-4 md:py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.2)] transition-transform duration-500" style="display: none;">
+    <div id="cookieConsent" class="max-lg:hidden fixed bottom-0 left-0 right-0 z-[8] w-full bg-[#15142D] border-t border-[#F7A541] px-4 py-4 md:py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.2)] transition-transform duration-500 hidden">
         <div class="grid-container">
             <div class="flex max-md:flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <p class="text-white text-sm md:text-base leading-relaxed">
@@ -1114,6 +1117,16 @@
                 </button>
             </div>
         </div>
+    </div>
+
+    <!-- Плавающая CTA (мобильная) -->
+    <div class="hidden max-lg:flex fixed left-3 right-3 bottom-3 z-40 p-2.5 rounded-3xl bg-[#171C38]/92 border border-white/10 shadow-[0_16px_44px_rgba(15,23,42,0.22)] backdrop-blur-md items-center justify-between gap-2.5 max-[420px]:gap-2" aria-label="Быстрая заявка">
+        <span class="text-white text-sm max-[420px]:text-[13px] leading-tight font-extrabold pl-2 max-[420px]:pl-1.5">
+            Тестовый аудит<br>первые результаты через 2 дня
+        </span>
+        <a href="#mobile-request" class="shrink-0 inline-flex items-center justify-center min-h-[46px] min-w-[150px] max-[420px]:min-w-[132px] px-[18px] max-[420px]:px-3.5 py-3 rounded-2xl bg-[#F4CD44] text-[#15142D] text-sm font-black shadow-[0_10px_24px_rgba(255,196,0,0.28)] hover:bg-[#F7A541] hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer">
+            Попробовать
+        </a>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
