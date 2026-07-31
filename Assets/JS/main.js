@@ -144,7 +144,7 @@ validate
   ]);
 
 
-// Добавьте этот код в $(document).ready()
+// $(document).ready()
 $(document).ready(function() {
   const $consentCheckbox = $('#consent');
   const $submitButton = $('#sumbitModal');
@@ -175,27 +175,24 @@ $(document).ready(function() {
 
 
 /* submit form */
-const token = "7928469961:AAHT1gppJpIZPZLltJkm_UQcnhvL5sjGw2o"
-const chat_id = "-5120226520"
-const url = `https://api.telegram.org/bot${token}/sendMessage`
+const VERCEL_API_ENDPOINT = "https://akocheck-back.vercel.app/api/sendTelegram"
+
 
 document.getElementById("mainModal").addEventListener("submit", function (e) {
     e.preventDefault();
 
     if(validate.isValid) {
     $("#sumbitModal").addClass("opacity-50 cursor-not-allowed").prop('disabled', true)
-    let message = `<b>Заявка с сайта.</b>\n`;
-    message += `<b>Причина обращения: </b> ${this.userReason.value}\n`;
-    message += `<b>Отправитель: </b> ${this.userName.value}\n`;
-    message += `<b>Номер телефона: </b> ${this.userPhone.value}\n`;
-    message += `<b>Email: </b> ${this.userEmail.value}\n`;
-    message += `<b>Кнопка: </b> ${this.textButton.value}`;
+   
+    const formDataToSend = {
+      userReason: this.userReason.value,
+      userName: this.userName.value,
+      userPhone: this.userPhone.value,
+      userEmail: this.userEmail.value,
+      textButton: this.textButton.value,
+    };
 
-    axios.post(url, {
-        chat_id: chat_id,
-        parse_mode: 'html',
-        text: message
-    })
+    axios.post(VERCEL_API_ENDPOINT, formDataToSend)
     .then((res) => {
         this.userName.value = ""
         this.userPhone.value = ""
