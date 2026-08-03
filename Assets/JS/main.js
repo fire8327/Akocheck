@@ -276,19 +276,19 @@ if (mobileRequestForm) {
         const $submitBtn = $('#mobileSubmitBtn');
         $submitBtn.addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
 
-        let message = `<b>Заявка с сайта.</b>\n`;
-        message += `<b>Страница: </b> service3 — мобильная форма\n`;
-        message += `<b>Отправитель: </b> ${this.elements.name.value}\n`;
-        message += `<b>Номер телефона: </b> ${this.elements.phone.value}\n`;
-        if (this.elements.email.value) message += `<b>Email: </b> ${this.elements.email.value}\n`;
-        if (this.elements.city.value) message += `<b>Город: </b> ${this.elements.city.value}\n`;
-        if (this.elements.message.value) message += `<b>Причина обращения: </b> ${this.elements.message.value}\n`;
+        const reasonParts = ['service3 — мобильная форма'];
+        if (this.elements.city.value) reasonParts.push(`Город: ${this.elements.city.value}`);
+        if (this.elements.message.value) reasonParts.push(this.elements.message.value);
 
-        axios.post(url, {
-            chat_id: chat_id,
-            parse_mode: 'html',
-            text: message,
-        })
+        const formDataToSend = {
+            userReason: reasonParts.join('\n'),
+            userName: this.elements.name.value,
+            userPhone: this.elements.phone.value,
+            userEmail: this.elements.email.value,
+            textButton: 'Попробовать тестовый аудит',
+        };
+
+        axios.post(VERCEL_API_ENDPOINT, formDataToSend)
         .then(() => {
             this.elements.name.value = '';
             this.elements.phone.value = '';
